@@ -1,5 +1,7 @@
 package com.Juanlu.model;
 
+import com.Juanlu.model.multimedia.Film;
+
 import java.util.*;
 
 /**
@@ -9,7 +11,7 @@ public abstract class Multimedia {
     protected Calendar releaseDate;
     protected ArrayList<Actor> actors;
     protected Actor director;
-    protected double puntuacion;
+    protected double score;
     protected String name;
     protected int code;
 
@@ -18,7 +20,7 @@ public abstract class Multimedia {
 
     /**
      * Constructor designado con todos los parámetros
-     * @param puntuacion double puntuación del producto
+     * @param score double puntuación del producto
      * @param releaseDate Date fecha en la cual se estrenó o estrenara el producto
      * @param actors ArrayList de Actors que participan
      * @param director Actor director del producto
@@ -28,12 +30,12 @@ public abstract class Multimedia {
     public Multimedia(Calendar releaseDate,
                       ArrayList<Actor> actors,
                       Actor director,
-                      double puntuacion,
+                      double score,
                       String name,
                       int code) {
         this.releaseDate = releaseDate;
         this.actors = actors;
-        this.puntuacion = puntuacion;
+        this.score = score;
         this.name = name.trim();
         this.code = code;
         this.director = director;
@@ -45,18 +47,25 @@ public abstract class Multimedia {
      */
     public Multimedia(){
         this.releaseDate = new GregorianCalendar();
-        //TODO
         this.actors = new ArrayList<Actor>();
-        this.puntuacion = 0.0;
+        this.score = 0.0;
         this.name = "";
         this.director = new Actor();
         this.code = 0;
     }
 
+    public Multimedia(double score) {
+        this.releaseDate = new GregorianCalendar();
+        this.actors = new ArrayList<Actor>();
+        this.score = score;
+        this.name = "";
+        this.director = new Actor();
+        this.code = 0;
+        this.score = score;
+    }
 
 
-
-    //Accesores
+//Accesores
 
     public Calendar getReleaseDate() {
         return releaseDate;
@@ -82,12 +91,12 @@ public abstract class Multimedia {
         this.director = director;
     }
 
-    public double getPuntuacion() {
-        return puntuacion;
+    public double getScore() {
+        return score;
     }
 
-    public void setPuntuacion(double puntuacion) {
-        this.puntuacion = puntuacion;
+    public void setScore(double score) {
+        this.score = score;
     }
 
     public String getName() {
@@ -137,4 +146,66 @@ public abstract class Multimedia {
 
     }
 
+    /**
+     * Compara por la puntuacion, para poner la de mayor puntuacion más alto.
+     */
+    public static Comparator ComparatorByScore = new Comparator() {
+        @Override
+        public int compare(Object o1, Object o2) {
+            Multimedia m1 = (Multimedia) o1;
+            Multimedia m2 = (Multimedia) o2;
+
+            double result;
+
+            result = m1.getScore() - m2.getScore();
+
+            if (result > 0){
+                return -1;
+            }else if(result < 0){
+                return 1;
+            }else {
+                return m1.getName().compareToIgnoreCase(m2.getName());
+            }
+        }
+    };
+
+    /**
+     *  Comparador por el nombre.
+     */
+    public static Comparator ComparatorByName = new Comparator() {
+        @Override
+        public int compare(Object o1, Object o2) {
+            Multimedia m1 = (Multimedia) o1;
+            Multimedia m2 = (Multimedia) o2;
+
+            return m1.getName().compareToIgnoreCase(m2.getName());
+        }
+    };
+
+    /**
+     * Comparador por Fecha. El más nuevo saldrá antes en la ordenación
+     */
+    public static Comparator ComparatorByDate = new Comparator() {
+        @Override
+        public int compare(Object o1, Object o2) {
+            Multimedia m1 = (Multimedia) o1;
+            Multimedia m2 = (Multimedia) o2;
+
+            return (int)(m1.getReleaseDate().getTimeInMillis() - m2.getReleaseDate().getTimeInMillis());
+        }
+    };
+
+
+    //TODO arreglas toString
+    @Override
+    public String toString() {
+        return "Multimedia{" +
+                "releaseDate=" + releaseDate +
+                ", actors=" + actors +
+                ", director=" + director +
+                ", score=" + score +
+                ", name='" + name + '\'' +
+                ", code=" + code +
+                '}';
+    }
 }
