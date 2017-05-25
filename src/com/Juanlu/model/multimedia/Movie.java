@@ -20,7 +20,6 @@ public class Movie extends Multimedia{
      * Constructor designado con todos los parámetros
      * @param releaseDate Date fecha de inicio de la pelcula
      * @param actors ArrayList de Actors que participan en la pelicula
-     * @param director Actor director de la pelicula
      * @param puntuacion double score de la pelicula
      * @param name String nombre de la pelicula
      * @param code int codigo de la pelicula
@@ -28,11 +27,10 @@ public class Movie extends Multimedia{
      */
     public Movie(Calendar releaseDate,
                  ArrayList<Actor> actors,
-                 Actor director,
                  double puntuacion,
                  String name, int code,
                  double budget) {
-        super(releaseDate, actors, director, puntuacion, name, code);
+        super(releaseDate, actors, puntuacion, name, code);
 
         try {
             this.setBudget( budget );
@@ -47,6 +45,7 @@ public class Movie extends Multimedia{
      * Constructor sin parámetros
      */
     public Movie() {
+        super();
         this.budget = 0;
     }
 
@@ -89,9 +88,9 @@ public class Movie extends Multimedia{
             double rest = f1.getBudget() - f2.getBudget();
 
             if (rest > 0){
-                return 1;
-            }else if (rest < 0){
                 return -1;
+            }else if (rest < 0){
+                return 1;
             }else {
                 return (int)(f1.getReleaseDate().getTimeInMillis() - f2.getReleaseDate().getTimeInMillis());
             }

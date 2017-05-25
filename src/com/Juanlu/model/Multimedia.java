@@ -8,7 +8,6 @@ import java.util.*;
 public abstract class Multimedia {
     protected Calendar releaseDate;
     protected ArrayList<Actor> actors;
-    protected Actor director;
     protected double score;
     protected String name;
     protected int code;
@@ -21,13 +20,11 @@ public abstract class Multimedia {
      * @param score double puntuación del producto
      * @param releaseDate Date fecha en la cual se estrenó o estrenara el producto
      * @param actors ArrayList de Actors que participan
-     * @param director Actor director del producto
      * @param name String nombre del producto
      * @param code int codigo del producto
      */
     public Multimedia(Calendar releaseDate,
                       ArrayList<Actor> actors,
-                      Actor director,
                       double score,
                       String name,
                       int code) {
@@ -36,7 +33,6 @@ public abstract class Multimedia {
         this.score = score;
         this.name = name.trim();
         this.code = code;
-        this.director = director;
     }
 
     /**
@@ -48,7 +44,6 @@ public abstract class Multimedia {
         this.actors = new ArrayList<Actor>();
         this.score = 0.0;
         this.name = "";
-        this.director = new Actor();
         this.code = 0;
     }
 
@@ -57,7 +52,6 @@ public abstract class Multimedia {
         this.actors = new ArrayList<Actor>();
         this.score = score;
         this.name = "";
-        this.director = new Actor();
         this.code = 0;
         this.score = score;
     }
@@ -79,14 +73,6 @@ public abstract class Multimedia {
 
     public void setActors(ArrayList<Actor> actors) {
         this.actors = actors;
-    }
-
-    public Actor getDirector() {
-        return director;
-    }
-
-    public void setDirector(Actor director) {
-        this.director = director;
     }
 
     public double getScore() {
@@ -200,7 +186,6 @@ public abstract class Multimedia {
         return "Multimedia{" +
                 "releaseDate=" + releaseDate +
                 ", actors=" + actors +
-                ", director=" + director +
                 ", score=" + score +
                 ", name='" + name + '\'' +
                 ", code=" + code +

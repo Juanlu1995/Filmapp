@@ -29,7 +29,7 @@ public class Documentary extends Multimedia {
      * @param description String tema del que trata el documental
      */
     public Documentary(Calendar releaseDate, ArrayList<Actor> actors, Actor director, double puntuacion, String name, int code, String description) {
-        super(releaseDate, actors, director, puntuacion, name, code);
+        super(releaseDate, actors, puntuacion, name, code);
         this.description = description.trim();
     }
 

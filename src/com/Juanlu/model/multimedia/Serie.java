@@ -40,7 +40,7 @@ public class Serie extends Multimedia {
                  int seasons,
                  int chapters,
                  Date finishDate) {
-        super(releaseDate, actors, director, puntuacion, name, code);
+        super(releaseDate, actors, puntuacion, name, code);
 
         try {
             this.setSeasons(seasons);

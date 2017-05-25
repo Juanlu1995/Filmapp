@@ -6,10 +6,7 @@ import com.Juanlu.model.multimedia.Documentary;
 import com.Juanlu.model.multimedia.Movie;
 import com.Juanlu.model.multimedia.Serie;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by juanl on 20/05/2017.
@@ -137,23 +134,32 @@ public class Filmapp {
         }while (index != 0);
     }
 
+    /**
+     * En este menú creamos las peliculas.
+     * Tenemos que darle valores a cada uno de los atributos de la pelicula controlando que no den errores.
+     *
+     * @param movies ArrayList de peliculas
+     * @param actorsAvailable ArrayList de actores que hay hasta el momoneto creados y, por lo tanto,
+     *                        leibles por nuestro programa
+     */
     private static void addMovie(ArrayList<Movie> movies, ArrayList<Actor> actorsAvailable) {
         Scanner input = new Scanner(System.in);
-        /*
-            protected Calendar releaseDate;
-            protected Actor director;
-         */
+
         int num = 0;
 
         boolean valid = false;
-        String nameFilm;
-        double score, bugdet;
-        int codeFilm;
+        String nameFilm = "";
+        double score = 0, bugdet = 0;
         ArrayList<Actor> actorsInMovie = new ArrayList<Actor>();
 
+        Calendar releaseDate = new GregorianCalendar();
+        int releaseYear = 0;
+        int releaseMonth = 0;
+        int releaseDay = 0;
+        //Damos el nombre de la pelicula
         do {
             try {
-                System.out.println("Nombre de la pelicula: ");
+                System.out.print("Nombre de la pelicula: ");
                 nameFilm = input.nextLine();
                 valid = true;
             } catch (InputMismatchException e) {
@@ -161,10 +167,12 @@ public class Filmapp {
                 input.nextLine();
             }
         } while (valid == false);
+
         valid = false;
+        //Damos una puntuacion a la pelicula entre 0 y 100.
         do {
             try {
-                System.out.println("\nPuntuacion de la pelicula (0-100): ");
+                System.out.print("\nPuntuacion de la pelicula (0-100): ");
                 score = input.nextDouble();
                 if (score <= 100 && score >= 0) {
                     valid = true;
@@ -176,7 +184,11 @@ public class Filmapp {
                 input.nextLine();
             }
         } while (valid == false);
+
         valid = false;
+
+        //Damos el presupuesto de la pelcula.
+        //Impedimos que el presupuesto sea menor de 0
         do {
             try {
                 System.out.print("\nPresupuesto de la pelicula (En millones): ");
@@ -193,60 +205,116 @@ public class Filmapp {
 
         } while (valid == false);
 
-        //TODO Falla al introducir el actor.
-        //En la seleccion de actores, para que no cambiar la condicion de salida que tenemos en el programa
-        // hacemos la impresion desde el uno, y cuando se introduce el valor del actor se le resta 1 para compensarlo
-        // de la impresion.
-        do {
-            try {
-                printActor(actorsAvailable);
-                System.out.println("* 1 - Añadir actor de la lista a la pelicula ");
-                System.out.println("* 2 - Crear nuevo actor");
-                System.out.println("* 0 - Salir");
-                num = input.nextInt();
-                if (num >= 0) {
-                    if (actorsInMovie.size() <= 0 && num == 0) {
-                        System.out.println("Tienes que añadir al menos un actor a la película.");
-                        num = -1;
-                    } else if (num == 1) {
-                        actorsInMovie.add(addActorToMovieOnList(actorsAvailable,actorsInMovie));
-                    }
-                } else {
-                    System.out.println("Número no válido, prueba otro.");
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("Valor no válido. Introduce un número válido");
-            }
-        } while (num != 0);
-
+        //Damos a la pelicula los actores.
+        //No permitimos que hayan actores repetidos en la pelicula.
+        //Si el actor que queremos no existe en nuestra lista de actores, lo podemos crear.
 
         do {
             try {
-                System.out.println("¿Quieres añadir un nuevo actor diferente a los de la lista?");
+                System.out.println("\n¿Quieres añadir un actor a la película?");
                 System.out.println("* 1 - Sí");
                 System.out.println("* 0 - No");
                 num = input.nextInt();
-                if (num == 1) {
-                    addActor(actorsAvailable);
+                if (num == 0 && actorsInMovie.size() == 0) {
+                    System.out.println("Tienes que añadir al menos un actor a la película");
+                    addActorToMovieOnList(actorsAvailable, actorsInMovie);
+                    num = -1;
+                } else if (num == 1) {
+                    System.out.println();
+                    System.out.println();
+                    System.out.println("* 1 - Añadir actor de la lista de actores");
+                    System.out.println("* 2 - Añadir nuevo actor");
+                    System.out.println("\nActores de la lista: ");
+                    printActor(actorsAvailable);
+                    num = input.nextInt();
+                    if (num == 1){
+                        num = addActorToMovieOnList(actorsAvailable,actorsInMovie);
+                        if (num != -1){
+                            actorsInMovie.add(actorsAvailable.get(num));
+                        }
+                    }else if (num == 2){
+                        addActor(actorsAvailable);
+                        actorsInMovie.add((actorsAvailable.get(actorsAvailable.size()-1)));
+                    }
+                    num = -1;
                 }
-            } catch (InputMismatchException e) {
-                System.out.println("Valor introducido no válido. Intente otro.");
+            }catch (InputMismatchException e){
+                System.out.println("Valor no válido. Introduce un numero válido");
+                input.nextLine();
             }
-        } while (num != 0);
+        }while (num != 0);
+
+        valid = false;
+
+        //Creamos la fecha
+        do {
+            try {
+                do {
+                    System.out.print("Año de estreno (YYYY): ");
+                    releaseYear = input.nextInt();
+                    if (releaseYear < 1887){
+                        System.out.println("Numero no válido. El cine, se invento en 1887. El año tiene que ser porsterior al mismo");
+                    }
+                }while (releaseYear < 1887);
+                do {
+                    System.out.print("Mes de estreno(MM): ");
+                    releaseMonth = input.nextInt();
+                    if (releaseMonth <= 0 || releaseMonth > 12){
+                        System.out.println("El mes no puede ser mayor que 12 ni menor que 1.");
+                    }
+                }while (releaseMonth <= 0 || releaseMonth > 12);
+                do {
+                    System.out.print("Dia de estreno(DD): ");
+                    releaseMonth = input.nextInt();
+                    if (releaseMonth <= 0 || releaseMonth > 31){
+                        System.out.println("El dia no puede ser mayor que 31 ni menor que 1.");
+                    }
+                }while (releaseMonth <= 0 || releaseMonth > 31);
+                valid = true;
+            }catch (InputMismatchException e){
+                System.out.println("Valor no válido. Por favor, introduce un valor válido");
+            }
+        }while (valid == false);
+
+        //Añadimos la pelicula
+        movies.add(new Movie(
+                new GregorianCalendar(releaseYear-1,releaseMonth-1,releaseDay-1),
+                actorsInMovie,
+                score,
+                nameFilm,
+                movies.size(),
+                bugdet));
     }
 
+
     /**
-     * Método para añadir un actor de la lista a la pelicula
+     * Método para añadir un actor de la lista de actores ya creados a la pelicula.
      * @param actorsAvailable ArrayList de actores disponibles
      * @param actorsInMovie ArrayList de actores en la pelicula
-     * @return Actor para añadir a la pelicula
+     * @return int del actor para añadir a la pelicula
      */
-    private static Actor addActorToMovieOnList(ArrayList<Actor> actorsAvailable, ArrayList<Actor> actorsInMovie) {
+    private static int addActorToMovieOnList(ArrayList<Actor> actorsAvailable, ArrayList<Actor> actorsInMovie) {
         Scanner input = new Scanner(System.in);
         int num;
 
-
-
+        try {
+            printActor(actorsAvailable);
+            System.out.print("Selecciona un actor para la pelicula: ");
+            num = input.nextInt();
+            if (actorsAvailable.contains(new Actor(num))) {
+                if (actorsInMovie.contains(new Actor(num))) {
+                    System.out.println("El actor ya está en la película");
+                } else {
+                    return num;
+                }
+            } else {
+                System.out.println("Introduce un número válido");
+            }
+        }catch (InputMismatchException e) {
+            System.out.println("Valor no válido");
+            input.nextLine();
+        }
+        return -1;
     }
 
 
