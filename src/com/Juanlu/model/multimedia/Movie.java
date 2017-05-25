@@ -4,13 +4,12 @@ import com.Juanlu.model.Actor;
 import com.Juanlu.model.Multimedia;
 import com.Juanlu.model.NegativeNumberException;
 
-import javax.swing.plaf.PanelUI;
 import java.util.*;
 
 /**
  * Created by juanl on 20/05/2017.
  */
-public class Film extends Multimedia{
+public class Movie extends Multimedia{
 
     private double budget;
 
@@ -27,12 +26,12 @@ public class Film extends Multimedia{
      * @param code int codigo de la pelicula
      * @param budget double presupuesto de la pelicula
      */
-    public Film(Calendar releaseDate,
-                ArrayList<Actor> actors,
-                Actor director,
-                double puntuacion,
-                String name, int code,
-                double budget) {
+    public Movie(Calendar releaseDate,
+                 ArrayList<Actor> actors,
+                 Actor director,
+                 double puntuacion,
+                 String name, int code,
+                 double budget) {
         super(releaseDate, actors, director, puntuacion, name, code);
 
         try {
@@ -47,11 +46,11 @@ public class Film extends Multimedia{
     /**
      * Constructor sin parámetros
      */
-    public Film() {
+    public Movie() {
         this.budget = 0;
     }
 
-    public Film(double score) {
+    public Movie(double score) {
         super(score);
         budget = 0;
     }
@@ -84,8 +83,8 @@ public class Film extends Multimedia{
     public static Comparator ComparatorByBudget = new Comparator() {
         @Override
         public int compare(Object o1, Object o2) {
-            Film f1 = (Film) o1;
-            Film f2 = (Film) o2;
+            Movie f1 = (Movie) o1;
+            Movie f2 = (Movie) o2;
 
             double rest = f1.getBudget() - f2.getBudget();
 

@@ -2,11 +2,9 @@ package com.Juanlu.controller;
 
 import com.Juanlu.model.Actor;
 import com.Juanlu.model.Multimedia;
-import com.Juanlu.model.NegativeNumberException;
 import com.Juanlu.model.multimedia.Documentary;
-import com.Juanlu.model.multimedia.Film;
+import com.Juanlu.model.multimedia.Movie;
 import com.Juanlu.model.multimedia.Serie;
-import org.omg.CORBA.INITIALIZE;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,16 +35,16 @@ public class Filmapp {
         Scanner input = new Scanner(System.in);
 
         ArrayList<Actor> actors = new ArrayList<>();
-        ArrayList<Film> films = new ArrayList<>();
+        ArrayList<Movie> movies = new ArrayList<>();
         ArrayList<Serie> series = new ArrayList<>();
         ArrayList<Documentary> documentarys = new ArrayList<>();
 
-//        films.add(new Film());
-//        films.add(new Film(30.0));
-//        films.add(new Film(5.5));
+//        movies.add(new Movie());
+//        movies.add(new Movie(30.0));
+//        movies.add(new Movie(5.5));
 
+        actors.add(new Actor(0));
         actors.add(new Actor(1));
-        actors.add(new Actor(2));
         int index;
 
         do {
@@ -54,7 +52,7 @@ public class Filmapp {
             index = selector();
             switch (index){
                 case 1:
-                    filmMenu(films,actors);
+                    movieMenu(movies,actors);
                     break;
                 case 2:
                     seriesMenu(series,actors);
@@ -63,10 +61,10 @@ public class Filmapp {
 //                    documentarysMenu(documentarys,actors);
 //                    break;
 //                case 4:
-//                    printGenaralList(films,series,documentarys);
+//                    printGenaralList(movies,series,documentarys);
 //                    break;
 //                case 5:
-//                    printListAllMultimediaOptions(films,series,documentarys);
+//                    printListAllMultimediaOptions(movies,series,documentarys);
                    case 0:
                     System.out.println("Bye!");
                        break;
@@ -99,7 +97,7 @@ public class Filmapp {
 
 
     //TODO queda por hacer el switch y las opciones de cada uno (Peliculas), así como comentarios. Arreglado el bucle de las excepciones.
-    private static void filmMenu(ArrayList<Film> films, ArrayList<Actor> actors) {
+    private static void movieMenu(ArrayList<Movie> movies, ArrayList<Actor> actors) {
         Scanner input = new Scanner(System.in);
         int index = 0;
 
@@ -118,16 +116,16 @@ public class Filmapp {
 
             switch (index){
                 case 1:
-                    printFilmOptions(films);
+                    printMovieOptions(movies);
                     break;
                 case 2:
-                    addMultimedia(films,actors);
+                    addMovie(movies,actors);
                     break;
 //                case 3:
-//                    delMultimedia(films,actors);
+//                    delMultimedia(movies,actors);
 //                    break;
 //                case 4:
-//                    editMultimedia(films,actors);
+//                    editMultimedia(movies,actors);
 //                    break;
                 case 0:
                     System.out.println("Volviendo al menú principal");
@@ -139,7 +137,7 @@ public class Filmapp {
         }while (index != 0);
     }
 
-    private static void addMultimedia(ArrayList<Film> films, ArrayList<Actor> actorsAvailable) {
+    private static void addMovie(ArrayList<Movie> movies, ArrayList<Actor> actorsAvailable) {
         Scanner input = new Scanner(System.in);
         /*
             protected Calendar releaseDate;
@@ -148,21 +146,21 @@ public class Filmapp {
         int num = 0;
 
         boolean valid = false;
-        String name;
+        String nameFilm;
         double score, bugdet;
-        int code;
-        ArrayList<Actor> actors = new ArrayList<Actor>();
+        int codeFilm;
+        ArrayList<Actor> actorsInMovie = new ArrayList<Actor>();
 
         do {
             try {
                 System.out.println("Nombre de la pelicula: ");
-                name = input.nextLine();
+                nameFilm = input.nextLine();
                 valid = true;
             } catch (InputMismatchException e) {
                 System.out.println("Valor no válido, intentalo otra vez");
                 input.nextLine();
             }
-        }while (valid == false);
+        } while (valid == false);
         valid = false;
         do {
             try {
@@ -170,60 +168,128 @@ public class Filmapp {
                 score = input.nextDouble();
                 if (score <= 100 && score >= 0) {
                     valid = true;
-                }else {
+                } else {
                     System.out.println("Numero no valido, tiene que ser entre 0 y 100");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Valor no válido, intentalo otra vez.");
                 input.nextLine();
             }
-        }while (valid == false);
+        } while (valid == false);
         valid = false;
         do {
             try {
                 System.out.print("\nPresupuesto de la pelicula (En millones): ");
                 bugdet = input.nextDouble();
-                if (bugdet >= 0){
+                if (bugdet >= 0) {
                     valid = true;
-                }else {
+                } else {
                     System.out.println("Numero no válido, tiene que ser mayor o igual a 0");
                 }
-            }catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("Valor no válido, intentalo otra vez");
                 input.nextLine();
             }
 
-        }while (valid == false);
+        } while (valid == false);
+
         //TODO Falla al introducir el actor.
         //En la seleccion de actores, para que no cambiar la condicion de salida que tenemos en el programa
         // hacemos la impresion desde el uno, y cuando se introduce el valor del actor se le resta 1 para compensarlo
         // de la impresion.
+        do {
+            try {
+                printActor(actorsAvailable);
+                System.out.println("* 1 - Añadir actor de la lista a la pelicula ");
+                System.out.println("* 2 - Crear nuevo actor");
+                System.out.println("* 0 - Salir");
+                num = input.nextInt();
+                if (num >= 0) {
+                    if (actorsInMovie.size() <= 0 && num == 0) {
+                        System.out.println("Tienes que añadir al menos un actor a la película.");
+                        num = -1;
+                    } else if (num == 1) {
+                        actorsInMovie.add(addActorToMovieOnList(actorsAvailable,actorsInMovie));
+                    }
+                } else {
+                    System.out.println("Número no válido, prueba otro.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Valor no válido. Introduce un número válido");
+            }
+        } while (num != 0);
+
 
         do {
-            System.out.println("\n¿Alguno de estos actores está en la pelicula?");
-            printActor(actorsAvailable);
-            System.out.print("\nSelecciona el numero o pulse 0 para no añadir: ");
-            num = input.nextInt() -1;
-            if (actorsAvailable.contains(new Actor(num))){
-                if (!actors.contains(new Actor(num))){
-                    actors.add(actorsAvailable.get(num));
-                }else {
-                    System.out.println("\nEl actor ya está añadido");
+            try {
+                System.out.println("¿Quieres añadir un nuevo actor diferente a los de la lista?");
+                System.out.println("* 1 - Sí");
+                System.out.println("* 0 - No");
+                num = input.nextInt();
+                if (num == 1) {
+                    addActor(actorsAvailable);
                 }
-            }else {
-                System.out.println("\nNumero no válido, intente otro. Por favor.");
+            } catch (InputMismatchException e) {
+                System.out.println("Valor introducido no válido. Intente otro.");
             }
-        }while (num != -1);
+        } while (num != 0);
+    }
+
+    /**
+     * Método para añadir un actor de la lista a la pelicula
+     * @param actorsAvailable ArrayList de actores disponibles
+     * @param actorsInMovie ArrayList de actores en la pelicula
+     * @return Actor para añadir a la pelicula
+     */
+    private static Actor addActorToMovieOnList(ArrayList<Actor> actorsAvailable, ArrayList<Actor> actorsInMovie) {
+        Scanner input = new Scanner(System.in);
+        int num;
+
+
+
+    }
+
+
+    /**
+     * Añadimos un actor nuevo a la lista de actores disponibles
+     * @param actors ArrayList de actores
+     */
+    private static void addActor(ArrayList<Actor> actors) {
+        Scanner input = new Scanner(System.in);
+
+        int ageActor = 0;
+        String nameActor, lastNameActor;
+        Boolean valid = true;
+
+
+        System.out.print("Nombre del actor: ");
+        nameActor = input.nextLine();
+        System.out.print("\nApellido del actor: ");
+        lastNameActor = input.nextLine();
+        do {
+            try{
+                System.out.print("\nEdad del actor: ");
+                ageActor = input.nextInt();
+                if (ageActor < 0){
+                    System.out.println("La edad no puede ser negativa. Introduce un número válido.");
+                    valid = false;
+                }
+            }catch (InputMismatchException e){
+                System.out.println("Valor introducido no válido. Introduce uno válido.");
+            }
+        }while (valid == false);
+
+        actors.add(new Actor(actors.size(),nameActor,lastNameActor,ageActor));
     }
 
     /**
      * Nos imprime las posibilidades de ordenamiento de las las peliculas, así como el numero correspondiente para
      * acceder a dicha opcion.
      *
-     * @param films ArrayList de peliculas
-     * @see #printFilm(ArrayList)
+     * @param movies ArrayList de peliculas
+     * @see #printMovie(ArrayList)
      */
-    private static void printFilmOptions(ArrayList<Film> films) {
+    private static void printMovieOptions(ArrayList<Movie> movies) {
         int num;
         do {
             System.out.println("**************** ¿Comó quieres Imprimir? ****************");
@@ -240,20 +306,20 @@ public class Filmapp {
 
             switch (num){
                 case 1:
-                    Collections.sort(films,Multimedia.ComparatorByScore);
-                    printFilm(films);
+                    Collections.sort(movies,Multimedia.ComparatorByScore);
+                    printMovie(movies);
                     break;
                 case 2:
-                    Collections.sort(films,Multimedia.ComparatorByName);
-                    printFilm(films);
+                    Collections.sort(movies,Multimedia.ComparatorByName);
+                    printMovie(movies);
                     break;
                 case 3:
-                    Collections.sort(films,Multimedia.ComparatorByDate);
-                    printFilm(films);
+                    Collections.sort(movies,Multimedia.ComparatorByDate);
+                    printMovie(movies);
                     break;
                 case 4:
-                    Collections.sort(films,Film.ComparatorByBudget);
-                    printFilm(films);
+                    Collections.sort(movies, Movie.ComparatorByBudget);
+                    printMovie(movies);
                     break;
                 case 0:
                     System.out.println("Volviendo al menú Peliculas");
@@ -285,7 +351,10 @@ public class Filmapp {
     
     //Helppers
 
-
+    /**
+     * Prueba que el numero insertado
+     * @return
+     */
     private static int selector() {
         Scanner input = new Scanner(System.in);
         int num = 0;
@@ -301,14 +370,13 @@ public class Filmapp {
         return num;
     }
 
-
     /**
      * Hellpper para la impresion de peliculas.
-     * @param films ArrayList de peliculas.
+     * @param movies ArrayList de peliculas.
      */
-    private static void printFilm(ArrayList<Film> films){
-        for (Film film : films) {
-            System.out.println(film);
+    private static void printMovie(ArrayList<Movie> movies){
+        for (Movie movie : movies) {
+            System.out.println(movie);
         }
     }
 
@@ -318,7 +386,7 @@ public class Filmapp {
      */
     private static void printActor(ArrayList<Actor> actors){
         for (int i = 0 ; i < actors.size() ; i++) {
-            System.out.println("* " + (i+1) + " - " + actors.get(i));
+            System.out.println("* " + i + " - " + actors.get(i));
         }
     }
 }

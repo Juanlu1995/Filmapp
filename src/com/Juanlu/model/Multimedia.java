@@ -1,7 +1,5 @@
 package com.Juanlu.model;
 
-import com.Juanlu.model.multimedia.Film;
-
 import java.util.*;
 
 /**
