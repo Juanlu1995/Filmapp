@@ -183,12 +183,12 @@ public abstract class Multimedia {
     //TODO arreglas toString
     @Override
     public String toString() {
-        return "Multimedia{" +
-                "releaseDate=" + releaseDate +
-                ", actors=" + actors +
-                ", score=" + score +
-                ", name='" + name + '\'' +
-                ", code=" + code +
-                '}';
+        String fecha = releaseDate.getTime().toString();
+
+        return  "Código de película: " + code +
+                ", nombre de la película: " + name  +
+                ", fechad de salida: " + fecha +
+                ", actores: " + actors +
+                ", puntuacion: " + score;
     }
 }

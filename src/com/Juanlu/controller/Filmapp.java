@@ -93,7 +93,86 @@ public class Filmapp {
     }
 
 
-    //TODO queda por hacer el switch y las opciones de cada uno (Peliculas), así como comentarios. Arreglado el bucle de las excepciones.
+
+
+    /**
+     * Nos imprime las posibilidades de ordenamiento de las las peliculas, así como el numero correspondiente para
+     * acceder a dicha opcion.
+     *
+     * @param movies ArrayList de peliculas
+     * @see #printMovie(ArrayList)
+     */
+    private static void printMovieOptions(ArrayList<Movie> movies) {
+        int num;
+        do {
+            System.out.println("**************** ¿Comó quieres Imprimir? ****************");
+            System.out.println("*                  Impresion peliculas                  *");
+            System.out.println("* 1 - Por puntuacion                                    *");
+            System.out.println("* 2 - Por orden alfabético                              *");
+            System.out.println("* 3 - Por fecha de salida                               *");
+            System.out.println("* 4 - Por presupuesto                                   *");
+            System.out.println("* 0 - Salir                                             *");
+            System.out.println("*                                                       *");
+            System.out.println("*********************************************************");
+
+            num = selector();
+
+            switch (num){
+                case 1:
+                    Collections.sort(movies,Multimedia.ComparatorByScore);
+                    printMovie(movies);
+                    break;
+                case 2:
+                    Collections.sort(movies,Multimedia.ComparatorByName);
+                    printMovie(movies);
+                    break;
+                case 3:
+                    Collections.sort(movies,Multimedia.ComparatorByDate);
+                    printMovie(movies);
+                    break;
+                case 4:
+                    Collections.sort(movies, Movie.ComparatorByBudget);
+                    printMovie(movies);
+                    break;
+                case 0:
+                    System.out.println("Volviendo al menú Peliculas");
+                    break;
+
+                default:
+                    System.out.println("Numero no válido. Por favor, introduce otro.");
+            }
+        }while (num != 0);
+    }
+
+    /**
+     * Elimina una película de la lista de películas
+     * @param movies ArrayList de películas
+     */
+    private static void delMovie(ArrayList<Movie> movies) {
+        Scanner input = new Scanner(System.in);
+        int num;
+
+        try {
+            System.out.println("Lista de películas: ");
+
+            printMovie(movies);
+            System.out.print("Pelicula para borrar: ");
+            num = input.nextInt();
+            if (num <= 0 || num >= movies.size()){
+                System.out.println("Número válido. Por favor, introduce un número válido.");
+            }else {
+                movies.remove(num);
+            }
+        }catch (InputMismatchException e){
+            System.out.println("Valor no válido. Por favor, introduce un valor válido.");
+        }
+    }
+
+    /**
+     * Muestra el menú de qué se puede hacer con las películas y el número correspondiente para interactuar con ellas.
+     * @param movies ArrayList de películas
+     * @param actors ArrayList de actores
+     */
     private static void movieMenu(ArrayList<Movie> movies, ArrayList<Actor> actors) {
         Scanner input = new Scanner(System.in);
         int index = 0;
@@ -104,7 +183,6 @@ public class Filmapp {
             System.out.println("* 1 - Ver lista de peliculas ordenadas por...           *");
             System.out.println("* 2 - Añadir pelicula                                   *");
             System.out.println("* 3 - Eliminar pelicula                                 *");
-            System.out.println("* 4 - Editar una pelicula                               *");
             System.out.println("* 0 - Atrás                                             *");
             System.out.println("*                                                       *");
             System.out.println("*********************************************************");
@@ -118,18 +196,15 @@ public class Filmapp {
                 case 2:
                     addMovie(movies,actors);
                     break;
-//                case 3:
-//                    delMultimedia(movies,actors);
-//                    break;
-//                case 4:
-//                    editMultimedia(movies,actors);
-//                    break;
+                case 3:
+                    delMovie(movies);
+                    break;
                 case 0:
                     System.out.println("Volviendo al menú principal");
                     break;
 
-                    default:
-                        System.out.println("Numero no válido. Por favor, introduce otro");
+                default:
+                    System.out.println("Numero no válido. Por favor, introduce otro");
             }
         }while (index != 0);
     }
@@ -217,15 +292,12 @@ public class Filmapp {
                 num = input.nextInt();
                 if (num == 0 && actorsInMovie.size() == 0) {
                     System.out.println("Tienes que añadir al menos un actor a la película");
-                    addActorToMovieOnList(actorsAvailable, actorsInMovie);
                     num = -1;
                 } else if (num == 1) {
                     System.out.println();
                     System.out.println();
                     System.out.println("* 1 - Añadir actor de la lista de actores");
                     System.out.println("* 2 - Añadir nuevo actor");
-                    System.out.println("\nActores de la lista: ");
-                    printActor(actorsAvailable);
                     num = input.nextInt();
                     if (num == 1){
                         num = addActorToMovieOnList(actorsAvailable,actorsInMovie);
@@ -278,7 +350,7 @@ public class Filmapp {
 
         //Añadimos la pelicula
         movies.add(new Movie(
-                new GregorianCalendar(releaseYear-1,releaseMonth-1,releaseDay-1),
+                new GregorianCalendar(releaseYear,releaseMonth-1,releaseDay),
                 actorsInMovie,
                 score,
                 nameFilm,
@@ -350,54 +422,6 @@ public class Filmapp {
         actors.add(new Actor(actors.size(),nameActor,lastNameActor,ageActor));
     }
 
-    /**
-     * Nos imprime las posibilidades de ordenamiento de las las peliculas, así como el numero correspondiente para
-     * acceder a dicha opcion.
-     *
-     * @param movies ArrayList de peliculas
-     * @see #printMovie(ArrayList)
-     */
-    private static void printMovieOptions(ArrayList<Movie> movies) {
-        int num;
-        do {
-            System.out.println("**************** ¿Comó quieres Imprimir? ****************");
-            System.out.println("*                  Impresion peliculas                  *");
-            System.out.println("* 1 - Por puntuacion                                    *");
-            System.out.println("* 2 - Por orden alfabético                              *");
-            System.out.println("* 3 - Por fecha de salida                               *");
-            System.out.println("* 4 - Por presupuesto                                   *");
-            System.out.println("* 0 - Salir                                             *");
-            System.out.println("*                                                       *");
-            System.out.println("*********************************************************");
-
-            num = selector();
-
-            switch (num){
-                case 1:
-                    Collections.sort(movies,Multimedia.ComparatorByScore);
-                    printMovie(movies);
-                    break;
-                case 2:
-                    Collections.sort(movies,Multimedia.ComparatorByName);
-                    printMovie(movies);
-                    break;
-                case 3:
-                    Collections.sort(movies,Multimedia.ComparatorByDate);
-                    printMovie(movies);
-                    break;
-                case 4:
-                    Collections.sort(movies, Movie.ComparatorByBudget);
-                    printMovie(movies);
-                    break;
-                case 0:
-                    System.out.println("Volviendo al menú Peliculas");
-                    break;
-
-                default:
-                    System.out.println("Numero no válido. Por favor, introduce otro.");
-            }
-        }while (num != 0);
-    }
 
 
     /**
