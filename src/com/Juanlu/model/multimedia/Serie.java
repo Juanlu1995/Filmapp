@@ -4,10 +4,7 @@ import com.Juanlu.model.Actor;
 import com.Juanlu.model.Multimedia;
 import com.Juanlu.model.NegativeNumberException;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.InputMismatchException;
+import java.util.*;
 
 /**
  * Created by juanl on 20/05/2017.
@@ -25,7 +22,6 @@ public class Serie extends Multimedia {
      * @param puntuacion double puntuación del producto
      * @param releaseDate Date fecha en la cual se estrenó o estrenara el producto
      * @param actors ArrayList de Actors que participan
-     * @param director Actor director del producto
      * @param name String nombre del producto
      * @param code int codigo del producto
      * @param seasons int numero de temporadas de la serie
@@ -33,29 +29,15 @@ public class Serie extends Multimedia {
      */
     public Serie(Calendar releaseDate,
                  ArrayList<Actor> actors,
-                 Actor director,
                  double puntuacion,
                  String name,
                  int code,
                  int seasons,
-                 int chapters,
-                 Date finishDate) {
+                 int chapters){
         super(releaseDate, actors, puntuacion, name, code);
 
-        try {
-            this.setSeasons(seasons);
-        } catch (NegativeNumberException e) {
-            e.printStackTrace();
-        } catch (InputMismatchException e){
-            e.printStackTrace();
-        }
-        try{
-            this.setChapters(chapters);
-        } catch (NegativeNumberException e) {
-            e.printStackTrace();
-        } catch (InputMismatchException e){
-            e.printStackTrace();
-        }
+        this.seasons = seasons;
+        this.chapters = chapters;
     }
 
 
@@ -93,4 +75,22 @@ public class Serie extends Multimedia {
             this.chapters = chapters;
         }
     }
+
+
+    //Comparadores
+    public static Comparator ComparatosByChaptes = new Comparator() {
+        @Override
+        public int compare(Object o1, Object o2) {
+            Serie s1 = (Serie) o1;
+            Serie s2 = (Serie) o2;
+
+            int rest = s1.getChapters() - s2.getChapters();
+
+            if (rest != 0){
+                return rest;
+            }else {
+                return (int)(s1.getReleaseDate().getTimeInMillis() - s2.getReleaseDate().getTimeInMillis());
+            }
+        }
+    };
 }
