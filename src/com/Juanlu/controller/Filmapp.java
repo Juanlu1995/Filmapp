@@ -220,7 +220,7 @@ public class Filmapp {
             } while (num != 0);
         }else if (movies.size() == 1) {
             System.out.print("No hay peliculas suficiente par un orden. La unica pelicula de la que tenemos constancia es: ");
-            printMovies(movies);
+            System.out.println(movies.get(0));;
         }else {
             System.out.println("No hay peliculas.");
         }
