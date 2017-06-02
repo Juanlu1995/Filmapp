@@ -29,6 +29,8 @@ public class Actor {
                  String name,
                  String lastName,
                  int age) {
+        name = (Character.toUpperCase(name.charAt(0)) + name.substring(1,name.length()));
+
         this.code = code;
         this.name = name.trim();
         this.lastName = lastName.trim();

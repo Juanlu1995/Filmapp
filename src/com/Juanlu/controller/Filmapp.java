@@ -28,11 +28,50 @@ public class Filmapp {
      * @see #printGenaralList(ArrayList, ArrayList)
      */
     public static void run(){
-        Scanner input = new Scanner(System.in);
-
+//TODO agregar peliculas y series.
         ArrayList<Actor> actors = new ArrayList<>();
         ArrayList<Movie> movies = new ArrayList<>();
         ArrayList<Serie> series = new ArrayList<>();
+
+        actors.add(new Actor(actors.size(),"Daisy","Ridley",25));
+        actors.add(new Actor(actors.size(),"Adam","Driver",33));
+        actors.add(new Actor(actors.size(),"John ","Boyega",25));
+        actors.add(new Actor(actors.size(),"Charlie ","Cox",34));
+        actors.add(new Actor(actors.size(),"Krysten ","Ritter",35));
+        actors.add(new Actor(actors.size(),"Mike ","Colter ",40));
+        actors.add(new Actor(actors.size(),"Finn  ","Jones ",29));
+
+        ArrayList<Actor> starWars = new ArrayList<Actor>();
+        starWars.add(actors.get(0));
+        starWars.add(actors.get(1));
+        starWars.add(actors.get(2));
+
+        ArrayList<Actor> theDefenders = new ArrayList<Actor>();
+        theDefenders.add(actors.get(3));
+        theDefenders.add(actors.get(4));
+        theDefenders.add(actors.get(5));
+        theDefenders.add(actors.get(6));
+
+        movies.add(
+                new Movie(
+                        new GregorianCalendar(2017,11,15),
+                        starWars,
+                        9.7,
+                        "Star Wars: Episode VIII - The Last Jedi",
+                        movies.size(),
+                        200
+        ));
+
+        series.add(
+                new Serie(
+                        new GregorianCalendar(2017,7,18),
+                        theDefenders,
+                        9.8,
+                        "The Defenders",
+                        series.size(),
+                        1,
+                        1
+        ));
 
         int index;
 
@@ -301,10 +340,8 @@ public class Filmapp {
         double score = 0, bugdet = 0;
         ArrayList<Actor> actorsInMovie = new ArrayList<Actor>();
 
-        Calendar releaseDate = new GregorianCalendar();
-        int releaseYear = 0;
-        int releaseMonth = 0;
-        int releaseDay = 0;
+        Calendar releaseDate;
+
         //Damos el nombre de la pelicula
         do {
             try {
@@ -368,22 +405,8 @@ public class Filmapp {
                     System.out.println("Tienes que añadir al menos un actor a la película");
                     num = -1;
                 } else if (num == 1) {
-                    System.out.println();
-                    System.out.println();
-                    System.out.println("* 1 - Añadir actor de la lista de actores");
-                    System.out.println("* 2 - Añadir nuevo actor");
-                    num = input.nextInt();
-                    if (num == 1){
-                        num = addActorToMultimediaOnList(actorsAvailable,actorsInMovie);
-                        if (num != -1){
-                            actorsInMovie.add(actorsAvailable.get(num));
-                        }
-                    }else if (num == 2){
-                        addActor(actorsAvailable);
-                        actorsInMovie.add((actorsAvailable.get(actorsAvailable.size()-1)));
+                    actorSelector(actorsAvailable, actorsInMovie);
                     }
-                    num = -1;
-                }
             }catch (InputMismatchException e){
                 System.out.println("Valor no válido. Introduce un numero válido");
                 input.nextLine();
@@ -393,38 +416,12 @@ public class Filmapp {
         valid = false;
 
         //Creamos la fecha
-        do {
-            try {
-                do {
-                    System.out.print("Año de estreno (YYYY): ");
-                    releaseYear = input.nextInt();
-                    if (releaseYear < 1887){
-                        System.out.println("Numero no válido. El cine, se invento en 1887. El año tiene que ser porsterior al mismo");
-                    }
-                }while (releaseYear < 1887);
-                do {
-                    System.out.print("Mes de estreno(MM): ");
-                    releaseMonth = input.nextInt();
-                    if (releaseMonth <= 0 || releaseMonth > 12){
-                        System.out.println("El mes no puede ser mayor que 12 ni menor que 1.");
-                    }
-                }while (releaseMonth <= 0 || releaseMonth > 12);
-                do {
-                    System.out.print("Dia de estreno(DD): ");
-                    releaseMonth = input.nextInt();
-                    if (releaseMonth <= 0 || releaseMonth > 31){
-                        System.out.println("El dia no puede ser mayor que 31 ni menor que 1.");
-                    }
-                }while (releaseMonth <= 0 || releaseMonth > 31);
-                valid = true;
-            }catch (InputMismatchException e){
-                System.out.println("Valor no válido. Por favor, introduce un valor válido");
-            }
-        }while (valid == false);
+        releaseDate = createDate();
+
 
         //Añadimos la pelicula
         movies.add(new Movie(
-                new GregorianCalendar(releaseYear,releaseMonth-1,releaseDay),
+                releaseDate,
                 actorsInMovie,
                 score,
                 nameFilm,
@@ -542,21 +539,7 @@ public class Filmapp {
                     System.out.println("Tienes que añadir al menos un actor a la serie");
                     num = -1;
                 } else if (num == 1) {
-                    System.out.println();
-                    System.out.println();
-                    System.out.println("* 1 - Añadir actor de la lista de actores");
-                    System.out.println("* 2 - Añadir nuevo actor");
-                    num = input.nextInt();
-                    if (num == 1){
-                        num = addActorToMultimediaOnList(actorsAvailable,actorsInSerie);
-                        if (num != -1){
-                            actorsInSerie.add(actorsAvailable.get(num));
-                        }
-                    }else if (num == 2){
-                        addActor(actorsAvailable);
-                        actorsInSerie.add((actorsAvailable.get(actorsAvailable.size()-1)));
-                    }
-                    num = -1;
+                    actorSelector(actorsAvailable,actorsInSerie);
                 }
             }catch (InputMismatchException e){
                 System.out.println("Valor no válido. Introduce un numero válido");
@@ -564,41 +547,13 @@ public class Filmapp {
             }
         }while (num != 0);
 
-        valid = false;
 
         //Creamos la fecha
-        do {
-            try {
-                do {
-                    System.out.print("Año de estreno (YYYY): ");
-                    releaseYear = input.nextInt();
-                    if (releaseYear < 1887){
-                        System.out.println("Numero no válido. El cine, se invento en 1887. El año tiene que ser porsterior al mismo");
-                    }
-                }while (releaseYear < 1887);
-                do {
-                    System.out.print("Mes de estreno(MM): ");
-                    releaseMonth = input.nextInt();
-                    if (releaseMonth <= 0 || releaseMonth > 12){
-                        System.out.println("El mes no puede ser mayor que 12 ni menor que 1.");
-                    }
-                }while (releaseMonth <= 0 || releaseMonth > 12);
-                do {
-                    System.out.print("Dia de estreno(DD): ");
-                    releaseMonth = input.nextInt();
-                    if (releaseMonth <= 0 || releaseMonth > 31){
-                        System.out.println("El dia no puede ser mayor que 31 ni menor que 1.");
-                    }
-                }while (releaseMonth <= 0 || releaseMonth > 31);
-                valid = true;
-            }catch (InputMismatchException e){
-                System.out.println("Valor no válido. Por favor, introduce un valor válido");
-            }
-        }while (valid == false);
+        releaseDate = createDate();
 
         //Añadimos la serie
         series.add(new Serie(
-                new GregorianCalendar(releaseYear,releaseMonth-1,releaseDay),
+                releaseDate,
                 actorsInSerie,
                 score,
                 nameSerie,
@@ -609,6 +564,32 @@ public class Filmapp {
     }
 
 
+    /**
+     * Nos da la opcion de añadir actores a los productos multimedia de una lista de actores ya creados o
+     * crear un añadir un actor nuevo a la lista de actores y, seguidamente, añadirlo al producto multimedia.
+     * @param actorsAvailable ArrayList de actores ya creados.
+     * @param actorsInMultimedia ArrayList de actores en el producto multimedia
+     */
+    private static void actorSelector(ArrayList<Actor> actorsAvailable, ArrayList<Actor> actorsInMultimedia) {
+        Scanner input = new Scanner(System.in);
+
+        int num = 0;
+
+        System.out.println();
+        System.out.println();
+        System.out.println("* 1 - Añadir actor de la lista de actores");
+        System.out.println("* 2 - Añadir nuevo actor");
+        num = input.nextInt();
+        if (num == 1){
+            num = addActorToMultimediaOnList(actorsAvailable,actorsInMultimedia);
+            if (num != -1){
+                actorsInMultimedia.add(actorsAvailable.get(num));
+            }
+        }else if (num == 2){
+            addActor(actorsAvailable);
+            actorsInMultimedia.add((actorsAvailable.get(actorsAvailable.size()-1)));
+        }
+    }
 
 
     /**
@@ -640,12 +621,6 @@ public class Filmapp {
         }
         return -1;
     }
-
-
-    /**
-     * Añadimos un actor nuevo a la lista de actores disponibles
-     * @param actors ArrayList de actores
-     */
 
 
     /**
@@ -701,7 +676,10 @@ public class Filmapp {
         }
     }
 
-
+    /**
+     * Creamos un nuevo actor en la lista de actores disponibles.
+     * @param actors ArrayList de actores.
+     */
     private static void addActor(ArrayList<Actor> actors) {
         Scanner input = new Scanner(System.in);
 
@@ -750,6 +728,57 @@ public class Filmapp {
         }while (num == -1);
         return num;
     }
+
+    /**
+     * Usamos el método para crear una fecha de salida a los productos multimedia sin fallos y sin repetir código
+     * @return Calendar fecha de estreno
+     */
+    private static Calendar createDate() {
+        Scanner input = new Scanner(System.in);
+
+        int releaseYear = 0, releaseMonth = 0, releaseDay = 0;
+        boolean valid = false;
+
+        System.out.println("\nFecha de estreno: ");
+        do {
+            try {
+                System.out.print("Año de estreno (YYYY): ");
+                releaseYear = input.nextInt();
+                if (releaseYear < 1887) {
+                    System.out.println("Numero no válido. El cine, se invento en 1887. El año tiene que ser porsterior al mismo");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Valor no válido. Por favor, introduce un valor válido");
+            }
+        } while (releaseYear < 1887);
+
+        do {
+            try {
+                System.out.print("Mes de estreno(MM): ");
+                releaseMonth = input.nextInt();
+                if (releaseMonth <= 0 || releaseMonth > 12) {
+                    System.out.println("El mes no puede ser mayor que 12 ni menor que 1.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Valor no válido. Por favor, introduce un valor válido");
+            }
+        } while (releaseMonth <= 0 || releaseMonth > 12);
+
+        do {
+            try {
+                System.out.print("Dia de estreno(DD): ");
+                releaseDay = input.nextInt();
+                if (releaseDay <= 0 || releaseDay > 31) {
+                    System.out.println("El dia no puede ser mayor que 31 ni menor que 1.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Valor no válido. Por favor, introduce un valor válido");
+            }
+        } while (releaseDay <= 0 || releaseDay > 31);
+
+        return new GregorianCalendar(releaseYear, releaseMonth - 1, releaseDay);
+    }
+
 
     /**
      * Hellpper para la impresion de peliculas.

@@ -1,7 +1,6 @@
 package com.Juanlu.model;
 
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -20,9 +19,9 @@ public abstract class Multimedia {
 
     /**
      * Constructor designado con todos los parámetros
-     * @param score double puntuación del producto
      * @param releaseDate Date fecha en la cual se estrenó o estrenara el producto
      * @param actors ArrayList de Actors que participan
+     * @param score double puntuación del producto
      * @param name String nombre del producto
      * @param code int codigo del producto
      */
@@ -183,11 +182,12 @@ public abstract class Multimedia {
     };
 
 
-    //TODO arreglas toString
+    //TODO arreglar toString
     @Override
     public String toString() {
         SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
         String fecha = formato.format(this.releaseDate.getTime());
+
         return  "Código de película: " + code +
                 ", nombre de la película: " + name  +
                 ", fechad de salida: " + fecha +

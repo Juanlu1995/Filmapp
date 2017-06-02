@@ -28,15 +28,14 @@ public class Movie extends Multimedia{
     public Movie(Calendar releaseDate,
                  ArrayList<Actor> actors,
                  double puntuacion,
-                 String name, int code,
+                 String name,
+                 int code,
                  double budget) {
         super(releaseDate, actors, puntuacion, name, code);
 
         try {
             this.setBudget( budget );
         } catch (NegativeNumberException e) {
-            e.printStackTrace();
-        } catch (InputMismatchException e) {
             e.printStackTrace();
         }
     }
