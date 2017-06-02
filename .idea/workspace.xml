@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcd10c1b-bd4b-47f7-abd2-4d24126052b3" name="Default" comment="Falta arreglar el guardado en archivo. Solo se guardan presupuesto y fecha en el caso de las películas y temporadas y capitulos en el caso de las series.">
+    <list default="true" id="bcd10c1b-bd4b-47f7-abd2-4d24126052b3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/controller/Filmapp.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/controller/Filmapp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$3.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia.class" />
@@ -858,7 +858,7 @@
       <workItem from="1496348368994" duration="3268000" />
       <workItem from="1496398485936" duration="7245000" />
       <workItem from="1496410965636" duration="6084000" />
-      <workItem from="1496430993355" duration="4350000" />
+      <workItem from="1496430993355" duration="4402000" />
     </task>
     <task id="LOCAL-00001" summary="Error en la impresion de la fecha">
       <created>1496355515072</created>
@@ -881,11 +881,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496416692162</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Arreglar toString de los actores, no se distingue cuando termina un actor y empieza otro.">
+      <created>1496435573407</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496435573407</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78687000" />
+    <option name="totallyTimeSpent" value="78739000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -941,7 +948,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Error en la impresion de la fecha" />
     <MESSAGE value="Falta arreglar el guardado en archivo. Solo se guardan presupuesto y fecha en el caso de las películas y temporadas y capitulos en el caso de las series." />
-    <option name="LAST_COMMIT_MESSAGE" value="Falta arreglar el guardado en archivo. Solo se guardan presupuesto y fecha en el caso de las películas y temporadas y capitulos en el caso de las series." />
+    <MESSAGE value="Arreglar toString de los actores, no se distingue cuando termina un actor y empieza otro." />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglar toString de los actores, no se distingue cuando termina un actor y empieza otro." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
