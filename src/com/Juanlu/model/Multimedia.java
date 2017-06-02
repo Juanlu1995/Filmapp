@@ -177,7 +177,7 @@ public abstract class Multimedia {
             Multimedia m1 = (Multimedia) o1;
             Multimedia m2 = (Multimedia) o2;
 
-            return (int)(m1.getReleaseDate().getTimeInMillis() - m2.getReleaseDate().getTimeInMillis());
+            return (int)(m2.getReleaseDate().getTimeInMillis() - m1.getReleaseDate().getTimeInMillis());
         }
     };
 
@@ -188,10 +188,10 @@ public abstract class Multimedia {
         SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
         String fecha = formato.format(this.releaseDate.getTime());
 
-        return  "Código de película: " + code +
-                ", nombre de la película: " + name  +
-                ", fechad de salida: " + fecha +
-                ", actores: " + actors +
-                ", puntuacion: " + score;
+        return  "Nombre: " + name  +
+                ", puntuacion: " + score +
+                "\n\tActores: " + actors +
+                ", fecha de estreno: " + fecha;
+
     }
 }

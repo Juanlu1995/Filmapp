@@ -4,12 +4,16 @@ import com.Juanlu.model.Actor;
 import com.Juanlu.model.Multimedia;
 import com.Juanlu.model.NegativeNumberException;
 
+import java.io.Serializable;
 import java.util.*;
 
 /**
  * Created by juanl on 20/05/2017.
  */
-public class Serie extends Multimedia {
+public class Serie extends Multimedia implements Serializable{
+
+    private static final long serialVersionUID = 1223558925138969029L;
+
 
     private int seasons;
     private int chapters;
@@ -93,4 +97,15 @@ public class Serie extends Multimedia {
             }
         }
     };
+
+    @Override
+    public String toString() {
+        return super.toString()+
+                "\nTemporadas: " + seasons +
+                "Capítulos: " + chapters;
+    }
+
+
+
+
 }

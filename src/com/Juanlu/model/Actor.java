@@ -1,5 +1,9 @@
 package com.Juanlu.model;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.InputMismatchException;
@@ -8,7 +12,10 @@ import java.util.Objects;
 /**
  * Created by juanl on 20/05/2017.
  */
-public class Actor {
+public class Actor implements Serializable{
+    private static final long serialVersionUID = -1127679897910856261L;
+
+
     private int code;
     private String name;
     private String lastName;
@@ -23,7 +30,6 @@ public class Actor {
      * @param name String nombre
      * @param lastName String apellido
      * @param age Date fecha de nacimeinto
-     * @param multimedias
      */
     public Actor(int code,
                  String name,
@@ -140,11 +146,11 @@ public class Actor {
     //TODO arreglar el toString
     @Override
     public String toString() {
-        return "Actor{" +
-                "code=" + code +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                '}';
+        return  "Nombre: " + name +
+                ", apellido: " + lastName  +
+                ", edad: " + age;
     }
+
+
+
 }

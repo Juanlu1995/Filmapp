@@ -4,12 +4,16 @@ import com.Juanlu.model.Actor;
 import com.Juanlu.model.Multimedia;
 import com.Juanlu.model.NegativeNumberException;
 
+import java.io.Serializable;
 import java.util.*;
 
 /**
  * Created by juanl on 20/05/2017.
  */
-public class Movie extends Multimedia{
+public class Movie extends Multimedia implements Serializable{
+
+    private static final long serialVersionUID = 5345978744956420745L;
+
 
     private double budget;
 
@@ -100,8 +104,13 @@ public class Movie extends Multimedia{
     @Override
     public String toString() {
         return super.toString() +
-                "Presupuesto: " + budget;
+                "\nPresupuesto: " + budget;
     }
+
+
+
+
+
 
 }
 

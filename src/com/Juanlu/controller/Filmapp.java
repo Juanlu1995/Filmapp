@@ -5,12 +5,24 @@ import com.Juanlu.model.Multimedia;
 import com.Juanlu.model.multimedia.Movie;
 import com.Juanlu.model.multimedia.Serie;
 
+import java.io.*;
 import java.util.*;
 
 /**
  * Created by juanl on 20/05/2017.
  */
 public class Filmapp {
+
+    private ArrayList<Actor> actors = new ArrayList<>();
+    private ArrayList<Movie> movies = new ArrayList<>();
+    private ArrayList<Serie> series = new ArrayList<>();
+
+    public Filmapp() {
+        loadActors();
+        loadMovies();
+        loadSeries();
+    }
+
     /**
      * Iniciamos la aplicacion
      *
@@ -23,23 +35,21 @@ public class Filmapp {
      *
      *
      * @see #printListToDo()
-     * @see #movieMenu(ArrayList, ArrayList)
-     * @see #seriesMenu(ArrayList, ArrayList)
-     * @see #printGenaralList(ArrayList, ArrayList)
+     * @see #movieMenu()
+     * @see #seriesMenu()
+     * @see #printGenaralList()
      */
-    public static void run(){
-//TODO agregar peliculas y series.
-        ArrayList<Actor> actors = new ArrayList<>();
-        ArrayList<Movie> movies = new ArrayList<>();
-        ArrayList<Serie> series = new ArrayList<>();
 
-        actors.add(new Actor(actors.size(),"Daisy","Ridley",25));
-        actors.add(new Actor(actors.size(),"Adam","Driver",33));
-        actors.add(new Actor(actors.size(),"John ","Boyega",25));
-        actors.add(new Actor(actors.size(),"Charlie ","Cox",34));
-        actors.add(new Actor(actors.size(),"Krysten ","Ritter",35));
-        actors.add(new Actor(actors.size(),"Mike ","Colter ",40));
-        actors.add(new Actor(actors.size(),"Finn  ","Jones ",29));
+    public void run(){
+//TODO agregar peliculas y series.
+
+        this.actors.add(new Actor(actors.size(),"Daisy","Ridley",25));
+        this.actors.add(new Actor(actors.size(),"Adam","Driver",33));
+        this.actors.add(new Actor(actors.size(),"John ","Boyega",25));
+        this.actors.add(new Actor(actors.size(),"Charlie ","Cox",34));
+        this.actors.add(new Actor(actors.size(),"Krysten ","Ritter",35));
+        this.actors.add(new Actor(actors.size(),"Mike ","Colter ",40));
+        this.actors.add(new Actor(actors.size(),"Finn  ","Jones ",29));
 
         ArrayList<Actor> starWars = new ArrayList<Actor>();
         starWars.add(actors.get(0));
@@ -52,7 +62,7 @@ public class Filmapp {
         theDefenders.add(actors.get(5));
         theDefenders.add(actors.get(6));
 
-        movies.add(
+        this.movies.add(
                 new Movie(
                         new GregorianCalendar(2017,11,15),
                         starWars,
@@ -62,7 +72,7 @@ public class Filmapp {
                         200
         ));
 
-        series.add(
+        this.series.add(
                 new Serie(
                         new GregorianCalendar(2017,7,18),
                         theDefenders,
@@ -80,16 +90,17 @@ public class Filmapp {
             index = selector();
             switch (index){
                 case 1:
-                    movieMenu(movies,actors);
+                    movieMenu();
                     break;
                 case 2:
-                    seriesMenu(series,actors);
+                    seriesMenu();
                     break;
                 case 3:
-                    printGenaralList(movies,series);
+                    printGenaralList();
                     break;
                 case 0:
                     System.out.println("Bye!");
+                    saveMultimedia();
                        break;
 
                     default:
@@ -99,13 +110,6 @@ public class Filmapp {
         }while (index != 0);
     }
 
-    private static void printGenaralList(ArrayList<Movie> movies, ArrayList<Serie> series) {
-        System.out.println("*********************   PELICULAS   *********************");
-        printMovies(movies);
-        System.out.println("\n***********************   SERIES   ***********************");
-        printSeries(series);
-
-    }
 
 
     /**
@@ -124,14 +128,10 @@ public class Filmapp {
     }
 
 
-
-
     /**
      * Muestra el menú de qué se puede hacer con las películas y el número correspondiente para interactuar con ellas.
-     * @param movies ArrayList de películas
-     * @param actors ArrayList de actores
      */
-    private static void movieMenu(ArrayList<Movie> movies, ArrayList<Actor> actors) {
+    private void movieMenu() {
         Scanner input = new Scanner(System.in);
         int index = 0;
 
@@ -149,13 +149,13 @@ public class Filmapp {
 
             switch (index){
                 case 1:
-                    printMovieOptions(movies);
+                    printMovieOptions();
                     break;
                 case 2:
-                    addMovie(movies,actors);
+                    addMovie();
                     break;
                 case 3:
-                    delMovie(movies);
+                    delMovie();
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal");
@@ -168,11 +168,9 @@ public class Filmapp {
     }
     /**
      * Muestra el menú de qué se puede hacer con las series y el número correspondiente para interactuar con ellas.
-     * @param series ArrayList de series
-     * @param actors ArrayList de actores
      */
-    private static void seriesMenu(ArrayList<Serie> series, ArrayList<Actor> actors) {
-        int index = 0;
+    private void seriesMenu() {
+        int index;
 
         do {
             System.out.println("****************   ¿QUÉ QUIERES HACER?   ****************");
@@ -180,7 +178,6 @@ public class Filmapp {
             System.out.println("* 1 - Ver lista de series ordenadas por...              *");
             System.out.println("* 2 - Añadir series                                     *");
             System.out.println("* 3 - Eliminar serie                                    *");
-            System.out.println("* 4 - Editar una serie                                  *");
             System.out.println("* 0 - Atrás                                             *");
             System.out.println("*                                                       *");
             System.out.println("*********************************************************");
@@ -188,13 +185,13 @@ public class Filmapp {
             index = selector();
             switch (index) {
                 case 1:
-                    printSerieOptions(series);
+                    printSerieOptions();
                     break;
                 case 2:
-                    addSerie(series, actors);
+                    addSerie();
                     break;
                 case 3:
-                    delSerie(series);
+                    delSerie();
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal");
@@ -212,15 +209,14 @@ public class Filmapp {
      * Nos imprime las posibilidades de ordenamiento de las las peliculas, así como el numero correspondiente para
      * acceder a dicha opcion.
      *
-     * @param movies ArrayList de peliculas
      * @see #printMovies(ArrayList)
      */
-    private static void printMovieOptions(ArrayList<Movie> movies) {
+    private void printMovieOptions() {
         int num;
 
         if (movies.size() > 1) {
             do {
-                System.out.println("**************** ¿Comó quieres Imprimir? ****************");
+                System.out.println("\n**************** ¿Comó quieres Imprimir? ****************");
                 System.out.println("*                  Impresion peliculas                  *");
                 System.out.println("* 1 - Por puntuacion                                    *");
                 System.out.println("* 2 - Por orden alfabético                              *");
@@ -234,20 +230,20 @@ public class Filmapp {
 
                 switch (num) {
                     case 1:
-                        Collections.sort(movies, Multimedia.ComparatorByScore);
-                        printMovies(movies);
+                        Collections.sort(this.movies, Multimedia.ComparatorByScore);
+                        printMovies(this.movies);
                         break;
                     case 2:
-                        Collections.sort(movies, Multimedia.ComparatorByName);
-                        printMovies(movies);
+                        Collections.sort(this.movies, Multimedia.ComparatorByName);
+                        printMovies(this.movies);
                         break;
                     case 3:
-                        Collections.sort(movies, Multimedia.ComparatorByDate);
-                        printMovies(movies);
+                        Collections.sort(this.movies, Multimedia.ComparatorByDate);
+                        printMovies(this.movies);
                         break;
                     case 4:
-                        Collections.sort(movies, Movie.ComparatorByBudget);
-                        printMovies(movies);
+                        Collections.sort(this.movies, Movie.ComparatorByBudget);
+                        printMovies(this.movies);
                         break;
                     case 0:
                         System.out.println("Volviendo al menú Peliculas");
@@ -257,9 +253,9 @@ public class Filmapp {
                         System.out.println("Numero no válido. Por favor, introduce otro.");
                 }
             } while (num != 0);
-        }else if (movies.size() == 1) {
+        }else if (this.movies.size() == 1) {
             System.out.print("No hay peliculas suficiente par un orden. La unica pelicula de la que tenemos constancia es: ");
-            System.out.println(movies.get(0));;
+            System.out.println(this.movies.get(0));;
         }else {
             System.out.println("No hay peliculas.");
         }
@@ -268,14 +264,13 @@ public class Filmapp {
      * Nos imprime las posibilidades de ordenamiento de las las series, así como el numero correspondiente para
      * acceder a dicha opcion.
      *
-     * @param series ArrayList de series
      * @see #printSeries(ArrayList)
      */
-    private static void printSerieOptions(ArrayList<Serie> series) {
+    private void printSerieOptions() {
         int num;
         if (series.size() > 1) {
             do {
-                System.out.println("**************** ¿Comó quieres Imprimir? ****************");
+                System.out.println("\n**************** ¿Comó quieres Imprimir? ****************");
                 System.out.println("*                  Impresion Series                     *");
                 System.out.println("* 1 - Por puntuacion                                    *");
                 System.out.println("* 2 - Por orden alfabético                              *");
@@ -289,19 +284,19 @@ public class Filmapp {
 
                 switch (num) {
                     case 1:
-                        Collections.sort(series, Multimedia.ComparatorByScore);
+                        Collections.sort(this.series, Multimedia.ComparatorByScore);
                         printSeries(series);
                         break;
                     case 2:
-                        Collections.sort(series, Multimedia.ComparatorByName);
+                        Collections.sort(this.series, Multimedia.ComparatorByName);
                         printSeries(series);
                         break;
                     case 3:
-                        Collections.sort(series, Multimedia.ComparatorByDate);
+                        Collections.sort(this.series, Multimedia.ComparatorByDate);
                         printSeries(series);
                         break;
                     case 4:
-                        Collections.sort(series, Serie.ComparatosByChaptes);
+                        Collections.sort(this.series, Serie.ComparatosByChaptes);
                         printSeries(series);
                         break;
                     case 0:
@@ -314,7 +309,7 @@ public class Filmapp {
             } while (num != 0);
         }else if (series.size() == 1){
             System.out.print("No hay series suficiente par un orden. La unica serie de la que tenemos constancia es: ");
-            printSeries(series);
+            System.out.println(series.get(0));
         }else {
             System.out.println("No hay series.");
         }
@@ -325,12 +320,8 @@ public class Filmapp {
     /**
      * En este menú creamos las peliculas.
      * Tenemos que darle valores a cada uno de los atributos de la pelicula controlando que no den errores.
-     *
-     * @param movies ArrayList de peliculas
-     * @param actorsAvailable ArrayList de actores que hay hasta el momoneto creados y, por lo tanto,
-     *                        leibles por nuestro programa
      */
-    private static void addMovie(ArrayList<Movie> movies, ArrayList<Actor> actorsAvailable) {
+    private void addMovie() {
         Scanner input = new Scanner(System.in);
 
         int num = 0;
@@ -405,7 +396,7 @@ public class Filmapp {
                     System.out.println("Tienes que añadir al menos un actor a la película");
                     num = -1;
                 } else if (num == 1) {
-                    actorSelector(actorsAvailable, actorsInMovie);
+                    actorSelector(actorsInMovie);
                     }
             }catch (InputMismatchException e){
                 System.out.println("Valor no válido. Introduce un numero válido");
@@ -420,7 +411,7 @@ public class Filmapp {
 
 
         //Añadimos la pelicula
-        movies.add(new Movie(
+        this.movies.add(new Movie(
                 releaseDate,
                 actorsInMovie,
                 score,
@@ -431,12 +422,8 @@ public class Filmapp {
     /**
      * En este menú creamos las series.
      * Tenemos que darle valores a cada uno de los atributos de la serie controlando que no den errores.
-     *
-     * @param series ArrayList de series
-     * @param actorsAvailable ArrayList de actores que hay hasta el momoneto creados y, por lo tanto,
-     *                        leibles por nuestro programa.
      */
-    private static void addSerie(ArrayList<Serie> series, ArrayList<Actor> actorsAvailable) {
+    private void addSerie() {
         Scanner input = new Scanner(System.in);
 
         int num = 0;
@@ -446,11 +433,8 @@ public class Filmapp {
         double score = 0;
         int seasons = 0, chapters = 0;
         ArrayList<Actor> actorsInSerie = new ArrayList<Actor>();
+        Calendar releaseDate;
 
-        Calendar releaseDate = new GregorianCalendar();
-        int releaseYear = 0;
-        int releaseMonth = 0;
-        int releaseDay = 0;
         //Damos el nombre de la serie
         do {
             try {
@@ -539,7 +523,7 @@ public class Filmapp {
                     System.out.println("Tienes que añadir al menos un actor a la serie");
                     num = -1;
                 } else if (num == 1) {
-                    actorSelector(actorsAvailable,actorsInSerie);
+                    actorSelector(actorsInSerie);
                 }
             }catch (InputMismatchException e){
                 System.out.println("Valor no válido. Introduce un numero válido");
@@ -552,7 +536,7 @@ public class Filmapp {
         releaseDate = createDate();
 
         //Añadimos la serie
-        series.add(new Serie(
+        this.series.add(new Serie(
                 releaseDate,
                 actorsInSerie,
                 score,
@@ -567,10 +551,9 @@ public class Filmapp {
     /**
      * Nos da la opcion de añadir actores a los productos multimedia de una lista de actores ya creados o
      * crear un añadir un actor nuevo a la lista de actores y, seguidamente, añadirlo al producto multimedia.
-     * @param actorsAvailable ArrayList de actores ya creados.
      * @param actorsInMultimedia ArrayList de actores en el producto multimedia
      */
-    private static void actorSelector(ArrayList<Actor> actorsAvailable, ArrayList<Actor> actorsInMultimedia) {
+    private void actorSelector(ArrayList<Actor> actorsInMultimedia) {
         Scanner input = new Scanner(System.in);
 
         int num = 0;
@@ -581,32 +564,31 @@ public class Filmapp {
         System.out.println("* 2 - Añadir nuevo actor");
         num = input.nextInt();
         if (num == 1){
-            num = addActorToMultimediaOnList(actorsAvailable,actorsInMultimedia);
+            num = addActorToMultimediaOnList(actorsInMultimedia);
             if (num != -1){
-                actorsInMultimedia.add(actorsAvailable.get(num));
+                actorsInMultimedia.add(this.actors.get(num));
             }
         }else if (num == 2){
-            addActor(actorsAvailable);
-            actorsInMultimedia.add((actorsAvailable.get(actorsAvailable.size()-1)));
+            addActor();
+            actorsInMultimedia.add((this.actors.get(this.actors.size()-1)));
         }
     }
 
 
     /**
      * Método para añadir un actor de la lista de actores ya creados a la pelicula.
-     * @param actorsAvailable ArrayList de actores disponibles
      * @param actorsInMovie ArrayList de actores en la pelicula
      * @return int del actor para añadir a la pelicula
      */
-    private static int addActorToMultimediaOnList(ArrayList<Actor> actorsAvailable, ArrayList<Actor> actorsInMovie) {
+    private int addActorToMultimediaOnList(ArrayList<Actor> actorsInMovie) {
         Scanner input = new Scanner(System.in);
         int num;
 
         try {
-            printActor(actorsAvailable);
+            printActor(this.actors);
             System.out.print("Selecciona un actor para la pelicula: ");
             num = input.nextInt();
-            if (actorsAvailable.contains(new Actor(num))) {
+            if (this.actors.contains(new Actor(num))) {
                 if (actorsInMovie.contains(new Actor(num))) {
                     System.out.println("El actor ya está en la película");
                 } else {
@@ -625,22 +607,21 @@ public class Filmapp {
 
     /**
      * Elimina una película de la lista de películas
-     * @param movies ArrayList de películas
      */
-    private static void delMovie(ArrayList<Movie> movies) {
+    private void delMovie() {
         Scanner input = new Scanner(System.in);
         int num;
-        if (movies.size() > 0) {
+        if (this.movies.size() > 0) {
             try {
                 System.out.println("Lista de películas: ");
 
-                printMovies(movies);
+                printMovies(this.movies);
                 System.out.print("Pelicula para borrar: ");
                 num = input.nextInt();
-                if (num <= 0 || num >= movies.size()) {
+                if (num <= 0 || num >= this.movies.size()) {
                     System.out.println("Número válido. Por favor, introduce un número válido.");
                 } else {
-                    movies.remove(num);
+                    this.movies.remove(num);
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Valor no válido. Por favor, introduce un valor válido.");
@@ -651,22 +632,21 @@ public class Filmapp {
     }
     /**
      * Elimina una serie de la lista de series.
-     * @param series ArrayList de series
      */
-    private static void delSerie(ArrayList<Serie> series) {
+    private void delSerie() {
         Scanner input = new Scanner(System.in);
         int num;
-        if (series.size() > 0) {
+        if (this.series.size() > 0) {
             try {
                 System.out.println("Lista de Series: ");
 
-                printSeries(series);
+                printSeries(this.series);
                 System.out.print("Pelicula para borrar: ");
                 num = input.nextInt();
-                if (num <= 0 || num >= series.size()) {
+                if (num <= 0 || num >= this.series.size()) {
                     System.out.println("Número válido. Por favor, introduce un número válido.");
                 } else {
-                    series.remove(num);
+                    this.series.remove(num);
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Valor no válido. Por favor, introduce un valor válido.");
@@ -678,9 +658,8 @@ public class Filmapp {
 
     /**
      * Creamos un nuevo actor en la lista de actores disponibles.
-     * @param actors ArrayList de actores.
      */
-    private static void addActor(ArrayList<Actor> actors) {
+    private void addActor() {
         Scanner input = new Scanner(System.in);
 
         int ageActor = 0;
@@ -705,7 +684,7 @@ public class Filmapp {
             }
         }while (valid == false);
 
-        actors.add(new Actor(actors.size(),nameActor,lastNameActor,ageActor));
+        this.actors.add(new Actor(this.actors.size(),nameActor,lastNameActor,ageActor));
     }
 
     //Helppers
@@ -785,8 +764,8 @@ public class Filmapp {
      * @param movies ArrayList de peliculas.
      */
     private static void printMovies(ArrayList<Movie> movies){
-        for (Movie movie : movies) {
-            System.out.println(movie);
+        for (int i = 0; i < movies.size() ; i++) {
+            System.out.println("* " + i + " - " + movies.get(i));
         }
     }
 
@@ -795,9 +774,20 @@ public class Filmapp {
      * @param series ArrayList de series.
      */
     private static void printSeries(ArrayList<Serie> series) {
-        for(Serie serie : series){
-            System.out.println(serie);
+        for (int i = 0; i < series.size() ; i++) {
+            System.out.println("* " + i + " - " + series.get(i));
         }
+    }
+
+    /**
+     * Imprime una lista general de todos los contenidos multimedias que tenemos en nuestro programa
+     */
+    private void printGenaralList() {
+        System.out.println("*********************   PELICULAS   *********************");
+        printMovies(this.movies);
+        System.out.println("\n***********************   SERIES   ***********************");
+        printSeries(this.series);
+
     }
 
     /**
@@ -809,4 +799,61 @@ public class Filmapp {
             System.out.println("* " + i + " - " + actors.get(i));
         }
     }
+
+
+
+
+    public void saveMultimedia() {
+        try {
+            ObjectOutputStream peliculas = new ObjectOutputStream( new FileOutputStream("info/peliculas.dat"));
+            peliculas.writeObject( this.movies );
+            peliculas.close();
+
+            ObjectOutputStream series = new ObjectOutputStream( new FileOutputStream("info/series.dat"));
+            series.writeObject( this.series );
+            series.close();
+
+            ObjectOutputStream actors = new ObjectOutputStream( new FileOutputStream("info/actors.dat"));
+            actors.writeObject( this.actors );
+            actors.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadMovies() {
+        try {
+            ObjectInputStream peliculas = new ObjectInputStream(new FileInputStream("info/peliculas.dat"));
+            this.movies = (ArrayList<Movie>)peliculas.readObject();
+            peliculas.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    public void loadSeries() {
+        try {
+            ObjectInputStream series = new ObjectInputStream(new FileInputStream("info/series.dat"));
+            this.series = (ArrayList<Serie>)series.readObject();
+            series.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    public void loadActors() {
+        try {
+            ObjectInputStream actors = new ObjectInputStream(new FileInputStream("info/actors.dat"));
+            this.actors = (ArrayList<Actor>)actors.readObject();
+            actors.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
