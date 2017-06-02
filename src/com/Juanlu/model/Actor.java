@@ -15,7 +15,6 @@ import java.util.Objects;
 public class Actor implements Serializable{
     private static final long serialVersionUID = -1127679897910856261L;
 
-
     private int code;
     private String name;
     private String lastName;
@@ -36,6 +35,7 @@ public class Actor implements Serializable{
                  String lastName,
                  int age) {
         name = (Character.toUpperCase(name.charAt(0)) + name.substring(1,name.length()));
+        lastName = (Character.toUpperCase(lastName.charAt(0)) + lastName.substring(1,lastName.length()));
 
         this.code = code;
         this.name = name.trim();
@@ -143,14 +143,11 @@ public class Actor implements Serializable{
 
 
 
-    //TODO arreglar el toString
+    //TODO arreglar el toString. No se distinguen cuando empieza un actor y otro.
     @Override
     public String toString() {
-        return  "Nombre: " + name +
-                ", apellido: " + lastName  +
+        String completeName = name + lastName;
+        return  "Nombre: " + completeName +
                 ", edad: " + age;
     }
-
-
-
 }

@@ -1,13 +1,17 @@
 package com.Juanlu.model;
 
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
  * Created by juanl on 20/05/2017.
  */
-public abstract class Multimedia {
+public abstract class Multimedia implements Serializable {
+    private static final long serialVersionUID = 5207859007818857455L;
+
+
     protected Calendar releaseDate;
     protected ArrayList<Actor> actors;
     protected double score;
@@ -30,6 +34,7 @@ public abstract class Multimedia {
                       double score,
                       String name,
                       int code) {
+        name = (Character.toUpperCase(name.charAt(0)) + name.substring(1,name.length()));
         this.releaseDate = releaseDate;
         this.actors = actors;
         this.score = score;
@@ -90,6 +95,7 @@ public abstract class Multimedia {
     }
 
     public void setName(String name) {
+        name = (Character.toUpperCase(name.charAt(0)) + name.substring(1,name.length()));
         this.name = name;
     }
 
@@ -182,7 +188,6 @@ public abstract class Multimedia {
     };
 
 
-    //TODO arreglar toString
     @Override
     public String toString() {
         SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
@@ -190,8 +195,8 @@ public abstract class Multimedia {
 
         return  "Nombre: " + name  +
                 ", puntuacion: " + score +
-                "\n\tActores: " + actors +
-                ", fecha de estreno: " + fecha;
+                "\n\t\tFecha de estreno: " + fecha +
+                "\n\t\tActores: " + actors;
 
     }
 }

@@ -41,47 +41,6 @@ public class Filmapp {
      */
 
     public void run(){
-//TODO agregar peliculas y series.
-
-        this.actors.add(new Actor(actors.size(),"Daisy","Ridley",25));
-        this.actors.add(new Actor(actors.size(),"Adam","Driver",33));
-        this.actors.add(new Actor(actors.size(),"John ","Boyega",25));
-        this.actors.add(new Actor(actors.size(),"Charlie ","Cox",34));
-        this.actors.add(new Actor(actors.size(),"Krysten ","Ritter",35));
-        this.actors.add(new Actor(actors.size(),"Mike ","Colter ",40));
-        this.actors.add(new Actor(actors.size(),"Finn  ","Jones ",29));
-
-        ArrayList<Actor> starWars = new ArrayList<Actor>();
-        starWars.add(actors.get(0));
-        starWars.add(actors.get(1));
-        starWars.add(actors.get(2));
-
-        ArrayList<Actor> theDefenders = new ArrayList<Actor>();
-        theDefenders.add(actors.get(3));
-        theDefenders.add(actors.get(4));
-        theDefenders.add(actors.get(5));
-        theDefenders.add(actors.get(6));
-
-        this.movies.add(
-                new Movie(
-                        new GregorianCalendar(2017,11,15),
-                        starWars,
-                        9.7,
-                        "Star Wars: Episode VIII - The Last Jedi",
-                        movies.size(),
-                        200
-        ));
-
-        this.series.add(
-                new Serie(
-                        new GregorianCalendar(2017,7,18),
-                        theDefenders,
-                        9.8,
-                        "The Defenders",
-                        series.size(),
-                        1,
-                        1
-        ));
 
         int index;
 
@@ -97,6 +56,9 @@ public class Filmapp {
                     break;
                 case 3:
                     printGenaralList();
+                    break;
+                case 4:
+                    saveMultimedia();
                     break;
                 case 0:
                     System.out.println("Bye!");
@@ -117,11 +79,12 @@ public class Filmapp {
      * de ejecucion de la opcion.
      */
     private static void printListToDo() {
-        System.out.println("****************   ¿QUÉ QUIERES HACER?   ****************");
+        System.out.println("\n****************   ¿QUÉ QUIERES HACER?   ****************");
         System.out.println("*                    Menu Principal                     *");
         System.out.println("* 1 - Menu Peliculas                                    *");
         System.out.println("* 2 - Menu Series                                       *");
         System.out.println("* 3 - Lista general (por puntuacion)                    *");
+        System.out.println("* 4 - Guardar los progresos                             *");
         System.out.println("* 0 - Salir                                             *");
         System.out.println("*                                                       *");
         System.out.println("*********************************************************");
@@ -470,7 +433,7 @@ public class Filmapp {
         //Impedimos que las temporadas sean menor de 0
         do {
             try {
-                System.out.print("\nTemporasdas de la serie: ");
+                System.out.print("\nTemporadas de la serie: ");
                 seasons = input.nextInt();
                 if (seasons >= 0) {
                     valid = true;
@@ -512,7 +475,6 @@ public class Filmapp {
         //Damos a la pelicula los actores.
         //No permitimos que hayan actores repetidos en la pelicula.
         //Si el actor que queremos no existe en nuestra lista de actores, lo podemos crear.
-//TODO evitar la repeticion del código
         do {
             try {
                 System.out.println("\n¿Quieres añadir un actor a la serie?");
@@ -614,7 +576,7 @@ public class Filmapp {
         if (this.movies.size() > 0) {
             try {
                 System.out.println("Lista de películas: ");
-
+                Collections.sort(this.movies,Multimedia.ComparatorByName);
                 printMovies(this.movies);
                 System.out.print("Pelicula para borrar: ");
                 num = input.nextInt();
@@ -642,6 +604,7 @@ public class Filmapp {
 
                 printSeries(this.series);
                 System.out.print("Pelicula para borrar: ");
+                Collections.sort(this.series,Multimedia.ComparatorByName);
                 num = input.nextInt();
                 if (num <= 0 || num >= this.series.size()) {
                     System.out.println("Número válido. Por favor, introduce un número válido.");
@@ -663,28 +626,46 @@ public class Filmapp {
         Scanner input = new Scanner(System.in);
 
         int ageActor = 0;
-        String nameActor, lastNameActor;
+        String nameActor = "", lastNameActor = "";
         Boolean valid = true;
 
-
-        System.out.print("Nombre del actor: ");
-        nameActor = input.nextLine();
-        System.out.print("\nApellido del actor: ");
-        lastNameActor = input.nextLine();
         do {
-            try{
-                System.out.print("\nEdad del actor: ");
-                ageActor = input.nextInt();
-                if (ageActor < 0){
-                    System.out.println("La edad no puede ser negativa. Introduce un número válido.");
-                    valid = false;
+            try {
+                System.out.print("Nombre del actor (sólo nombre): ");
+                nameActor = input.nextLine();
+                if (nameActor.length() > 0) {
+                    valid = true;
                 }
-            }catch (InputMismatchException e){
-                System.out.println("Valor introducido no válido. Introduce uno válido.");
+            } catch (InputMismatchException e) {
+                System.out.println("Valor no válido.");
             }
-        }while (valid == false);
+        } while (valid == false);
+        valid = false;
+        do {
+            try {
+                System.out.print("\nApellido del actor: ");
+                lastNameActor = input.nextLine();
+                valid = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Valor no válido.");
+            }
+            while (valid == false) ;
+            valid = false;
+            do {
+                try {
+                    System.out.print("\nEdad del actor: ");
+                    ageActor = input.nextInt();
+                    if (ageActor < 0) {
+                        System.out.println("La edad no puede ser negativa. Introduce un número válido.");
+                        valid = false;
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("Valor introducido no válido. Introduce uno válido.");
+                }
+            } while (valid == false);
 
-        this.actors.add(new Actor(this.actors.size(),nameActor,lastNameActor,ageActor));
+            this.actors.add(new Actor(this.actors.size(), nameActor, lastNameActor, ageActor));
+        } while (valid == false);
     }
 
     //Helppers
@@ -783,11 +764,11 @@ public class Filmapp {
      * Imprime una lista general de todos los contenidos multimedias que tenemos en nuestro programa
      */
     private void printGenaralList() {
-        System.out.println("*********************   PELICULAS   *********************");
+        System.out.println("\n*********************   PELICULAS   *********************");
         printMovies(this.movies);
         System.out.println("\n***********************   SERIES   ***********************");
         printSeries(this.series);
-
+        System.out.println();
     }
 
     /**

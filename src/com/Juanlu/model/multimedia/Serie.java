@@ -101,8 +101,8 @@ public class Serie extends Multimedia implements Serializable{
     @Override
     public String toString() {
         return super.toString()+
-                "\nTemporadas: " + seasons +
-                "Capítulos: " + chapters;
+                "\n\t\tTemporadas: " + seasons +
+                ", capítulos: " + chapters;
     }
 
 

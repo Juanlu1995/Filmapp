@@ -104,7 +104,7 @@ public class Movie extends Multimedia implements Serializable{
     @Override
     public String toString() {
         return super.toString() +
-                "\nPresupuesto: " + budget;
+                "\n\t\tPresupuesto: " + budget;
     }
 
 
