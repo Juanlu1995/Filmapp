@@ -8,11 +8,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$3.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/Main.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/model/Actor.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/model/Actor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Movie.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Movie.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -823,7 +818,7 @@
       <workItem from="1495991523651" duration="2414000" />
       <workItem from="1496097047465" duration="3930000" />
       <workItem from="1496348368994" duration="3268000" />
-      <workItem from="1496398485936" duration="7205000" />
+      <workItem from="1496398485936" duration="7245000" />
     </task>
     <task id="LOCAL-00001" summary="Error en la impresion de la fecha">
       <created>1496355515072</created>
@@ -832,11 +827,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496355515073</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Error en la impresion de la fecha">
+      <created>1496405738603</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1496405738603</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68213000" />
+    <option name="totallyTimeSpent" value="68253000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
