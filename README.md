@@ -1,8 +1,8 @@
-#**FilmApp**
+# **FilmApp**
 
-###***Desarrollado por: Juan Luis Romero Fresno.***
+### ***Desarrollado por: Juan Luis Romero Fresno.***
 
-#####*Clase de Programación. Proyecto de fin de curso.*
+##### *Clase de Programación. Proyecto de fin de curso.*
 <br>
 <br>
 <br>
@@ -14,7 +14,7 @@
 
 <br>
 
-##*1. Introduccion*
+## *1. Introduccion*
 
 Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto práctico de aplicacion
  básica para los Sistemas Operativos Android e iOS, así como una versión web para ordenador, que nos ayudará a conocer distintas
@@ -31,7 +31,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 
   <br>
 
-##*2. Objetivo del manual*
+## *2. Objetivo del manual*
 
  Como Entendemos que el usuario medio sólo suele entenderse con las ventanas gráficas, el manual está ideado para que
  ***FilmApp*** sea más ameno de usar por el mismo, puesto que nuestro programa no cuenta con las mismas y es esencial que
@@ -44,7 +44,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
   que nos envíen las dudas que vayan saliendo durante el uso del programa para responderla y añadirla al manual.
 
 
-  ##*3. Instrucciones de uso*
+  ## *3. Instrucciones de uso*
 
   Como nuestro programa no tiene interfaz gráfica, hemos optado por implementarle una interfaz con la mínima interacción con el usario posible
   para evitar errores. La mayor parte de las interacciones que tiene que hacer el usario del programa son a través de opciones numéricas previamente
@@ -67,7 +67,8 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 <br>
 <br>
 
-   ####1. Menú Películas
+   #### 1. Menú Películas
+   
    En éste menú nos salen las opciones que podemos usar con las películas, siendo éstas:
 
    1. Ver lista de películas ordenadas por...
@@ -77,7 +78,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 
     0. Atrás
 
-   #####***1.1 Ver lista de películas ordenadas por...***
+   ##### ***1.1 Ver lista de películas ordenadas por...***
 
    Ésta opción nos permite ordenar las películas disponibles de diferentes formas:
 
@@ -88,7 +89,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 
     0. Salir
 
-   #####***1.2 Añadir película***
+   ##### ***1.2 Añadir película***
 
    Ésta opcion nos permite añadir una película.
 
@@ -104,7 +105,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
    Si la película ha sido guardada correctamente podremos verla impresa por pantalla cuando le demos a dicha opción.
 
 
-   #####***1.3 Modidicar película***
+   ##### ***1.3 Modidicar película***
 
    Aquí lo primero que nos pregunta es qué pelicula queremos editar, mostrandonos las peliculas con todos sus atributos.
    Posteriormente, nos pregunta cual atributo queremos editar, siendo éstos:
@@ -119,7 +120,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 
     0. Volver.
 
-   #####***1.4 Eliminar película***
+   ##### ***1.4 Eliminar película***
 
    Lo primero que hace es mostrar la lista de películas, y seguidamente preguntarnos cuál queremos borrar.
    Cuando le indiquemos el número de la película que queremos borrar, lo hará inmediatamente. Ya no podremos visualizarla en la lista de películas.
@@ -127,7 +128,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
    <br>
    <br>
 
-####2. Menú Series
+#### 2. Menú Series
    En éste menú nos salen las opciones que podemos usar con las series, siendo éstas:
 
    1. Ver lista de series ordenadas por...
@@ -137,7 +138,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 
     0. Atrás
 
-   #####***2.1 Ver lista de series ordenadas por...***
+   ##### ***2.1 Ver lista de series ordenadas por...***
 
    Ésta opción nos permite ordenar las películas disponibles de diferentes formas:
 
@@ -148,7 +149,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 
     0. Salir
 
-   #####***2.2 Añadir serie***
+   ##### ***2.2 Añadir serie***
 
    Ésta opcion nos permite añadir una serie.
 
@@ -166,7 +167,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
    Si la serie ha sido guardada correctamente podremos verla impresa por pantalla cuando le demos a dicha opción.
 
 
-   #####***2.4 Modidicar película***
+   ##### ***2.4 Modidicar película***
 
    Aquí lo primero que nos pregunta es qué serie queremos editar, mostrandonos las series con todos sus atributos.
    Posteriormente, nos pregunta cual atributo queremos editar, siendo éstos:
@@ -180,7 +181,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 
     0. Volver.
 
-   #####***2.4 Eliminar película***
+   ##### ***2.4 Eliminar película***
 
    Lo primero que hace es mostrar la lista de series, y ,seguidamente, preguntarnos cuál queremos borrar.
    Cuando le indiquemos el número de la serie que queremos borrar, lo hará inmediatamente. Ya no podremos visualizarla en el contenido.
@@ -196,7 +197,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
    <br>
    <br>
 
-   ####4. Menu Actores
+   #### 4. Menu Actores
 
    El menú de actores es el más diferente de todos los menús, puesto que el de películas y series son muy parecidos.
 
@@ -208,7 +209,7 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 
     0 - Atrás.
 
-   #####***4.1 Ver lista de actores ordenador por...***
+   ##### ***4.1 Ver lista de actores ordenador por...***
    Al igual que las películas y las series, los actores también podemos verlos ordenados de diferentes maneras:
 
    1. Por nombre
@@ -217,20 +218,20 @@ Nuestra programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
 
     0 - Salir.
 
-   #####***4.2 Añadir actor***
+   ##### ***4.2 Añadir actor***
    Desde aquí podemos añadir actores para que las películas y las series los puedan añadir como parte de su reparto.
    
    Al igual que cuando añadimos una película o serie, nos pide paso a paso los atributos del actor: nombre, apellido y edad (no puede ser menor que 0).
 
-   #####***4.3 Modificar actor***
+   ##### ***4.3 Modificar actor***
    Nos muestra la lista de actores que podemos modificar y nos pide que seleccionemos uno.
    
    Cuando ha sido seleccionado, nos pregunta el nombre, el apellido y la edad de dicho actor (que no puede ser menor que 0)
    
    <br>
    <br>
-   
-   ####5. Guardar los cambios.
+    
+   #### 5. Guardar los cambios.
    Todos los cambios que hayamos hecho en nuestro programa (añadir, modificar o eliminar peliculas, series o actores) serán guardados para un posterior uso.
     
     
