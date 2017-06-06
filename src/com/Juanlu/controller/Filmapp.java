@@ -47,7 +47,7 @@ public class Filmapp {
         do {
             System.out.println("\n****************   ¿QUÉ QUIERES HACER?   ****************");
             System.out.println("*                    Menu Principal                     *");
-            System.out.println("* 1 - Menu Peliculas                                    *");
+            System.out.println("* 1 - Menu Películas                                    *");
             System.out.println("* 2 - Menu Series                                       *");
             System.out.println("* 3 - Lista general (por puntuacion)                    *");
             System.out.println("* 4 - Menu Actores                                      *");
@@ -97,11 +97,11 @@ public class Filmapp {
 
         do {
             System.out.println("****************   ¿QUÉ QUIERES HACER?   ****************");
-            System.out.println("*                       Peliculas                       *");
-            System.out.println("* 1 - Ver lista de peliculas ordenadas por...           *");
-            System.out.println("* 2 - Añadir pelicula                                   *");
-            System.out.println("* 3 - Modificar pelicula                                *");
-            System.out.println("* 4 - Eliminar pelicula                                 *");
+            System.out.println("*                       Películas                       *");
+            System.out.println("* 1 - Ver lista de películas ordenadas por...           *");
+            System.out.println("* 2 - Añadir película                                   *");
+            System.out.println("* 3 - Modificar película                                *");
+            System.out.println("* 4 - Eliminar película                                 *");
             System.out.println("* 0 - Atrás                                             *");
             System.out.println("*                                                       *");
             System.out.println("*********************************************************");
@@ -181,9 +181,9 @@ public class Filmapp {
         do {
             try {
                 System.out.println("****************   ¿QUÉ QUIERES HACER?   ****************");
-                System.out.println("*                        Actores                        *");
+                System.out.println("*                      Menú Actores                     *");
                 System.out.println("* 1 - Ver lista de actores ordenados por...             *");
-                System.out.println("* 2 - Añadir actor                        c             *");
+                System.out.println("* 2 - Añadir actor                                      *");
                 System.out.println("* 3 - Modificar actor                                   *");
                 System.out.println("* 0 - Atrás                                             *");
                 System.out.println("*                                                       *");
@@ -196,7 +196,7 @@ public class Filmapp {
                         printActorOptions();
                         break;
                     case 2:
-                        addActorSelector(this.actors);
+                        addNewActor();
                         break;
                     case 3:
                         editActor(this.actors);
@@ -215,7 +215,7 @@ public class Filmapp {
 
 
     /**
-     * Nos imprime las posibilidades de ordenamiento de las las peliculas, así como el numero correspondiente para
+     * Nos imprime las posibilidades de ordenamiento de las las películas, así como el numero correspondiente para
      * acceder a dicha opcion.
      *
      * @see #printMovies()
@@ -226,7 +226,7 @@ public class Filmapp {
         if (movies.size() > 1) {
             do {
                 System.out.println("\n**************** ¿Comó quieres Imprimir? ****************");
-                System.out.println("*                  Impresion peliculas                  *");
+                System.out.println("*                  Impresion películas                  *");
                 System.out.println("* 1 - Por puntuacion                                    *");
                 System.out.println("* 2 - Por orden alfabético                              *");
                 System.out.println("* 3 - Por fecha de salida                               *");
@@ -255,7 +255,7 @@ public class Filmapp {
                         printMovies();
                         break;
                     case 0:
-                        System.out.println("Volviendo al menú Peliculas");
+                        System.out.println("Volviendo al menú Películas");
                         break;
 
                     default:
@@ -263,10 +263,10 @@ public class Filmapp {
                 }
             } while (num != 0);
         }else if (this.movies.size() == 1) {
-            System.out.print("No hay peliculas suficiente par un orden. La unica pelicula de la que tenemos constancia es: ");
+            System.out.print("No hay películas suficiente par un orden. La unica película de la que tenemos constancia es: ");
             System.out.println(this.movies.get(0));;
         }else {
-            System.out.println("No hay peliculas.");
+            System.out.println("No hay películas.");
         }
         Collections.sort(this.movies,Multimedia.ComparatorByName);
     }
@@ -285,7 +285,7 @@ public class Filmapp {
                 System.out.println("* 1 - Por puntuacion                                    *");
                 System.out.println("* 2 - Por orden alfabético                              *");
                 System.out.println("* 3 - Por fecha de salida                               *");
-                System.out.println("* 4 - Por capítulos                                     *");
+                System.out.println("* 4 - Por número de capítulos                           *");
                 System.out.println("* 0 - Salir                                             *");
                 System.out.println("*                                                       *");
                 System.out.println("*********************************************************");
@@ -384,8 +384,8 @@ public class Filmapp {
 
 
     /**
-     * En este menú creamos las peliculas.
-     * Tenemos que darle valores a cada uno de los atributos de la pelicula controlando que no den errores.
+     * En este menú creamos las películas.
+     * Tenemos que darle valores a cada uno de los atributos de la película controlando que no den errores.
      */
     private void addMovie() {
         Scanner input = new Scanner(System.in);
@@ -399,10 +399,10 @@ public class Filmapp {
 
         Calendar releaseDate;
 
-        //Damos el nombre de la pelicula
+        //Damos el nombre de la película
         do {
             try {
-                System.out.print("Nombre de la pelicula: ");
+                System.out.print("Nombre de la película: ");
                 nameFilm = input.nextLine();
                 valid = true;
             } catch (InputMismatchException e) {
@@ -412,10 +412,10 @@ public class Filmapp {
         } while (valid == false);
 
         valid = false;
-        //Damos una puntuacion a la pelicula entre 0 y 10.
+        //Damos una puntuacion a la película entre 0 y 10.
         do {
             try {
-                System.out.print("\nPuntuacion de la pelicula (0-10): ");
+                System.out.print("\nPuntuacion de la película (0-10): ");
                 score = input.nextDouble();
                 if (score <= 10 && score >= 0) {
                     valid = true;
@@ -434,7 +434,7 @@ public class Filmapp {
         //Impedimos que el presupuesto sea menor de 0
         do {
             try {
-                System.out.print("\nPresupuesto de la pelicula (En millones): ");
+                System.out.print("\nPresupuesto de la película (En millones): ");
                 bugdet = input.nextDouble();
                 if (bugdet >= 0) {
                     valid = true;
@@ -448,8 +448,8 @@ public class Filmapp {
 
         } while (valid == false);
 
-        //Damos a la pelicula los actores.
-        //No permitimos que hayan actores repetidos en la pelicula.
+        //Damos a la película los actores.
+        //No permitimos que hayan actores repetidos en la película.
         //Si el actor que queremos no existe en nuestra lista de actores, lo podemos crear.
 
         do {
@@ -476,7 +476,7 @@ public class Filmapp {
         releaseDate = createDate();
 
 
-        //Añadimos la pelicula
+        //Añadimos la película
         this.movies.add(new Movie(
                 releaseDate,
                 actorsInMovie,
@@ -575,8 +575,8 @@ public class Filmapp {
 
 
 
-        //Damos a la pelicula los actores.
-        //No permitimos que hayan actores repetidos en la pelicula.
+        //Damos a la película los actores.
+        //No permitimos que hayan actores repetidos en la película.
         //Si el actor que queremos no existe en nuestra lista de actores, lo podemos crear.
         do {
             try {
@@ -614,7 +614,7 @@ public class Filmapp {
 
 
     /**
-     * Modifíca los valores de la pelicula.
+     * Modifíca los valores de la película.
      * Nos muestra un menú por el cual pordemos interactuar,
      * permitiéndonos modificar cada uno de los atributos de la película
      */
@@ -839,7 +839,7 @@ public class Filmapp {
                 System.out.println("\nLista de películas: ");
                 Collections.sort(this.movies,Multimedia.ComparatorByName);
                 printMovies();
-                System.out.print("Pelicula para borrar: ");
+                System.out.print("película para borrar: ");
                 num = input.nextInt();
                 if (num <= 0 || num >= this.movies.size()) {
                     System.out.println("Número válido. Por favor, introduce un número válido.");
@@ -850,7 +850,7 @@ public class Filmapp {
                 System.out.println("Valor no válido. Por favor, introduce un valor válido.");
             }
         } else {
-            System.out.println("No hay peliculas disponibles que puedas borrar.");
+            System.out.println("No hay películas disponibles que puedas borrar.");
         }
     }
     /**
@@ -864,7 +864,7 @@ public class Filmapp {
                 System.out.println("\nLista de Series: ");
 
                 printSeries();
-                System.out.print("Pelicula para borrar: ");
+                System.out.print("película para borrar: ");
                 Collections.sort(this.series,Multimedia.ComparatorByName);
                 num = input.nextInt();
                 if (num <= 0 || num >= this.series.size()) {
@@ -876,7 +876,7 @@ public class Filmapp {
                 System.out.println("Valor no válido. Por favor, introduce un valor válido.");
             }
         }else {
-            System.out.println("No hay peliculas en la lsta que puedas borrar");
+            System.out.println("No hay películas en la lsta que puedas borrar");
         }
     }
 
@@ -961,9 +961,9 @@ public class Filmapp {
     }
 
     /**
-     * Método para añadir un actor de la lista de actores ya creados a la pelicula.
-     * @param actorsInMovie ArrayList de actores en la pelicula
-     * @return int del actor para añadir a la pelicula
+     * Método para añadir un actor de la lista de actores ya creados a la película.
+     * @param actorsInMovie ArrayList de actores en la película
+     * @return int del actor para añadir a la película
      */
     private int addActorToMultimediaOnList(ArrayList<Actor> actorsInMovie) {
         Scanner input = new Scanner(System.in);
@@ -971,7 +971,7 @@ public class Filmapp {
 
         try {
             printActor(this.actors);
-            System.out.print("Selecciona un actor para la pelicula, o bien -1 para salir: ");
+            System.out.print("Selecciona un actor para la película, o bien -1 para salir: ");
             num = input.nextInt();
             if (this.actors.contains(new Actor(num))) {
                 if (actorsInMovie.contains(new Actor(num))) {
@@ -1176,7 +1176,7 @@ public class Filmapp {
 
 
     /**
-     * Hellpper para la impresion de peliculas.
+     * Hellpper para la impresion de películas.
      */
     private void printMovies(){
 
@@ -1198,7 +1198,7 @@ public class Filmapp {
      * Imprime una lista general de todos los contenidos multimedias que tenemos en nuestro programa
      */
     private void printGenaralList() {
-        System.out.println("\n\n\n*********************   PELICULAS   *********************");
+        System.out.println("\n\n\n*********************   películaS   *********************");
         Collections.sort(movies,Multimedia.ComparatorByScore);
         printMovies();
         System.out.println("\n***********************   SERIES   ***********************");
@@ -1223,7 +1223,7 @@ public class Filmapp {
      */
     private void saveMultimedia() {
         try {
-            ObjectOutputStream peliculas = new ObjectOutputStream( new FileOutputStream("info/peliculas.dat"));
+            ObjectOutputStream peliculas = new ObjectOutputStream( new FileOutputStream("info/películas.dat"));
             peliculas.writeObject( this.movies );
             peliculas.close();
 

@@ -187,7 +187,6 @@ public class Actor implements Serializable{
 
 
 
-    //TODO arreglar el toString. No se distinguen cuando empieza un actor y otro.
     @Override
     public String toString() {
         String completeName = name + " " + lastName;
