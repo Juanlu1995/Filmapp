@@ -61,7 +61,7 @@ Nuestro programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
    4. Menu Actores
    5. Guardar los cambios
 
-           0. Salir.
+        0. Salir.
 
 
 <br>
