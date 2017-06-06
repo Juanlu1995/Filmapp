@@ -61,7 +61,7 @@ Nuestro programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
    4. Menu Actores
    5. Guardar los cambios
 
-     0. Salir.
+           0. Salir.
 
 
 <br>
@@ -76,7 +76,7 @@ Nuestro programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
    3. Modificar película
    4. Eliminar película
 
-    0. Atrás
+        0. Atrás
 
    ##### ***1.1 Ver lista de películas ordenadas por...***
 
@@ -87,7 +87,7 @@ Nuestro programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
    3. Por fecha de salida
    4. Por presupuesto
 
-    0. Salir
+        0. Salir
 
    ##### ***1.2 Añadir película***
 
@@ -216,7 +216,7 @@ Nuestro programa, llamado ***FilmApp,*** ha sido ideado como un primer concepto 
    2. Por apellido
    3. Por edad
 
-    0 - Salir.
+        0 - Salir.
 
    ##### ***4.2 Añadir actor***
    Desde aquí podemos añadir actores para que las películas y las series los puedan introducir como parte de su reparto.
