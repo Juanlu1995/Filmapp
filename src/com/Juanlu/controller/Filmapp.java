@@ -31,11 +31,10 @@ public class Filmapp {
      * modificacion a gusto del cliente, ya sea eliminar o añadir un elemento a la lista.
      * Así mismo mostramos un menú que nos mostrará para elegir qué queremos hacer y los numeros validos
      * para cada opcion.
-     * Podemos movernos al menu de las peliculas(*1), el de las series(*2), imprimir una lista general
-     * de nuestros elementos multimedia (*3) o salir
+     * Podemos movernos al menú de las peliculas(*1), el de las series(*2), imprimir una lista general
+     * de nuestros elementos multimedia (*3), ir al menú de actores, guardar los cambios o salir (guardando los cambios)
      *
      *
-     * @see #printListToDo()
      * @see #movieMenu()
      * @see #seriesMenu()
      * @see #printGenaralList()
@@ -46,7 +45,16 @@ public class Filmapp {
         int index;
 
         do {
-            printListToDo();
+            System.out.println("\n****************   ¿QUÉ QUIERES HACER?   ****************");
+            System.out.println("*                    Menu Principal                     *");
+            System.out.println("* 1 - Menu Peliculas                                    *");
+            System.out.println("* 2 - Menu Series                                       *");
+            System.out.println("* 3 - Lista general (por puntuacion)                    *");
+            System.out.println("* 4 - Menu Actores                                      *");
+            System.out.println("* 5 - Guardar los cambios                               *");
+            System.out.println("* 0 - Salir                                             *");
+            System.out.println("*                                                       *");
+            System.out.println("*********************************************************");
             index = selector();
             switch (index){
                 case 1:
@@ -59,6 +67,9 @@ public class Filmapp {
                     printGenaralList();
                     break;
                 case 4:
+                    actorMenu();
+                    break;
+                case 5:
                     saveMultimedia();
                     break;
                 case 0:
@@ -74,22 +85,6 @@ public class Filmapp {
     }
 
 
-
-    /**
-     * Nos imprime una lista de las opcines validas que hacer en el programa, así como el número correspondiente
-     * de ejecucion de la opcion.
-     */
-    private static void printListToDo() {
-        System.out.println("\n****************   ¿QUÉ QUIERES HACER?   ****************");
-        System.out.println("*                    Menu Principal                     *");
-        System.out.println("* 1 - Menu Peliculas                                    *");
-        System.out.println("* 2 - Menu Series                                       *");
-        System.out.println("* 3 - Lista general (por puntuacion)                    *");
-        System.out.println("* 4 - Guardar los progresos                             *");
-        System.out.println("* 0 - Salir                                             *");
-        System.out.println("*                                                       *");
-        System.out.println("*********************************************************");
-    }
 
 
     /**
@@ -134,8 +129,6 @@ public class Filmapp {
             }
         }while (index != 0);
     }
-
-
     /**
      * Muestra el menú de qué se puede hacer con las series y el número correspondiente para interactuar con ellas.
      */
@@ -176,7 +169,44 @@ public class Filmapp {
             }
         }while (index != 0);
     }
+    private void actorMenu() {
+        Scanner input = new Scanner(System.in);
 
+        int num = 0;
+
+        do {
+            try {
+                System.out.println("****************   ¿QUÉ QUIERES HACER?   ****************");
+                System.out.println("*                        Actores                        *");
+                System.out.println("* 1 - Ver lista de actores ordenados por...             *");
+                System.out.println("* 2 - Añadir actor                        c             *");
+                System.out.println("* 3 - Modificar actor                                   *");
+                System.out.println("* 0 - Atrás                                             *");
+                System.out.println("*                                                       *");
+                System.out.println("*********************************************************");
+                num = input.nextInt();
+
+                switch (num) {
+                    case 1:
+                        printActorOptions();
+                        break;
+                    case 2:
+                        addActorSelector(this.actors);
+                        break;
+                    case 3:
+                        editActor(this.actors);
+                    case 0:
+                        System.out.println("Volviendo al menú principal.");
+                        break;
+
+                    default:
+                        System.out.println("Número no válido");
+                }
+            }catch (InputMismatchException e){
+                System.out.println("Valor no válido, intentalo otra vez");
+            }
+        }while (num != 0);
+    }
 
 
     /**
@@ -233,6 +263,7 @@ public class Filmapp {
         }else {
             System.out.println("No hay peliculas.");
         }
+        Collections.sort(this.movies,Multimedia.ComparatorByName);
     }
     /**
      * Nos imprime las posibilidades de ordenamiento de las las series, así como el numero correspondiente para
@@ -245,7 +276,7 @@ public class Filmapp {
         if (series.size() > 1) {
             do {
                 System.out.println("\n**************** ¿Comó quieres Imprimir? ****************");
-                System.out.println("*                  Impresion Series                     *");
+                System.out.println("*                    Impresion Series                   *");
                 System.out.println("* 1 - Por puntuacion                                    *");
                 System.out.println("* 2 - Por orden alfabético                              *");
                 System.out.println("* 3 - Por fecha de salida                               *");
@@ -287,6 +318,62 @@ public class Filmapp {
         }else {
             System.out.println("No hay series.");
         }
+        Collections.sort(this.series,Multimedia.ComparatorByName);
+    }
+    /**
+     * Nos imprime las posibilidades de ordenamiento de las los actores, así como el numero correspondiente para
+     * acceder a dicha opcion.
+     *
+     * @see #printActorOptions()
+     */
+    private void printActorOptions() {
+        int num = 0;
+        if (this.actors.size() > 0) {
+            do {
+                try {
+                    System.out.println("\n**************** ¿Comó quieres Imprimir? ****************");
+                    System.out.println("*                   Impresion Actores                   *");
+                    System.out.println("* 1 - Por nombre                                        *");
+                    System.out.println("* 2 - Por apellido                                      *");
+                    System.out.println("* 3 - Por edad                                          *");
+                    System.out.println("* 0 - Salir                                             *");
+                    System.out.println("*                                                       *");
+                    System.out.println("*********************************************************");
+
+                    num = selector();
+
+                    switch (num) {
+                        case 1:
+                            Collections.sort(this.actors, Actor.ComparatorByName);
+                            printActor(this.actors);
+                            break;
+                        case 2:
+                            Collections.sort(this.actors, Actor.ComparatorByLastName);
+                            printActor(this.actors);
+                            break;
+                        case 3:
+                            Collections.sort(this.actors, Actor.ComparatorByAge);
+                            printActor(this.actors);
+                            break;
+                        case 0:
+                            System.out.println("Volviendo al menú actores");
+                            break;
+
+                        default:
+                            System.out.println("Numero no válido. Por favor, introduce otro.");
+                    }
+                }catch (InputMismatchException e){
+                    System.out.println("Valor no válido, intentalo otra vez.");
+                }
+            } while (num != 0);
+        } else if (this.actors.size() == 1) {
+            System.out.print("No hay actores suficiente par un orden. El único actor del que tenemos constancia es: ");
+            System.out.println(this.actors.get(0));
+            ;
+        } else {
+            System.out.println("No hay actores.");
+        }
+        Collections.sort(this.actors,Actor.ComparatorByName);
     }
 
 
@@ -370,7 +457,7 @@ public class Filmapp {
                     System.out.println("Tienes que añadir al menos un actor a la película");
                     num = -1;
                 } else if (num == 1) {
-                    actorSelector(actorsInMovie);
+                    addActorSelector(actorsInMovie);
                     }
             }catch (InputMismatchException e){
                 System.out.println("Valor no válido. Introduce un numero válido");
@@ -496,7 +583,7 @@ public class Filmapp {
                     System.out.println("Tienes que añadir al menos un actor a la serie");
                     num = -1;
                 } else if (num == 1) {
-                    actorSelector(actorsInSerie);
+                    addActorSelector(actorsInSerie);
                 }
             }catch (InputMismatchException e){
                 System.out.println("Valor no válido. Introduce un numero válido");
@@ -522,65 +609,6 @@ public class Filmapp {
 
 
     /**
-     * Nos da la opcion de añadir actores a los productos multimedia de una lista de actores ya creados o
-     * crear un añadir un actor nuevo a la lista de actores y, seguidamente, añadirlo al producto multimedia.
-     * @param actorsInMultimedia ArrayList de actores en el producto multimedia
-     */
-    private void actorSelector(ArrayList<Actor> actorsInMultimedia) {
-        Scanner input = new Scanner(System.in);
-
-        int num = 0;
-
-        System.out.println();
-        System.out.println();
-        System.out.println("* 1 - Añadir actor de la lista de actores");
-        System.out.println("* 2 - Añadir nuevo actor");
-        num = input.nextInt();
-        if (num == 1){
-            num = addActorToMultimediaOnList(actorsInMultimedia);
-            if (num != -1){
-                actorsInMultimedia.add(this.actors.get(num));
-            }
-        }else if (num == 2){
-            addActor();
-            actorsInMultimedia.add((this.actors.get(this.actors.size()-1)));
-        }
-    }
-
-
-    /**
-     * Método para añadir un actor de la lista de actores ya creados a la pelicula.
-     * @param actorsInMovie ArrayList de actores en la pelicula
-     * @return int del actor para añadir a la pelicula
-     */
-    private int addActorToMultimediaOnList(ArrayList<Actor> actorsInMovie) {
-        Scanner input = new Scanner(System.in);
-        int num;
-
-        try {
-            printActor(this.actors);
-            System.out.print("Selecciona un actor para la pelicula, o bien -1 para salir: ");
-            num = input.nextInt();
-            if (this.actors.contains(new Actor(num))) {
-                if (actorsInMovie.contains(new Actor(num))) {
-                    System.out.println("El actor ya está en la película");
-                } else {
-                    return num;
-                }
-            }else if(num == -1){
-                System.out.println("Saliendo.");
-                return -1;
-            }else {
-                System.out.println("Introduce un número válido");
-            }
-        }catch (InputMismatchException e) {
-            System.out.println("Valor no válido");
-            input.nextLine();
-        }
-        return -1;
-    }
-//TODO que se pueda editar un actor en concreto.
-    /**
      * Modifíca los valores de la pelicula.
      * Nos muestra un menú por el cual pordemos interactuar,
      * permitiéndonos modificar cada uno de los atributos de la película
@@ -592,6 +620,7 @@ public class Filmapp {
         double budget = 0,score;
         boolean valid = false;
         String name;
+        ArrayList<Actor> newActors;
 
         valid = false;
         do {
@@ -608,14 +637,14 @@ public class Filmapp {
         valid = false;
         do {
             try {
-                System.out.println("¿Qué quieres modificar?");
+                System.out.println("\n" + movies.get(movie));
+                System.out.println("\n¿Qué quieres modificar?");
                 System.out.println("* 1 - Nombre");
                 System.out.println("* 2 - Puntuacion");
                 System.out.println("* 3 - Fecha de estreno");
                 System.out.println("* 4 - Actores");
                 System.out.println("* 5 - Presupuesto");
                 System.out.println("* 0 - Volver.");
-                System.out.println(movies.get(movie));
                 num = input.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Valor no válido. Por favor, introduce un valor válido");
@@ -647,7 +676,9 @@ public class Filmapp {
                     movies.get(movie).setReleaseDate(createDate());
                     break;
                 case 4:
-                    actorSelector(movies.get(movie).getActors());
+                    newActors = movies.get(movie).getActors();
+                    editActorSelector(newActors);
+                    movies.get(movie).setActors(newActors);
                     break;
                 case 5:
                     do {
@@ -674,7 +705,6 @@ public class Filmapp {
             }
         }while (num != 0);
     }
-
     /**
      * Modifíca los valores de la serie.
      * Nos muestra un menú por el cual pordemos interactuar,
@@ -686,6 +716,8 @@ public class Filmapp {
         int serie = 0, num = 0, seasons = 0, chapters = 0;
         boolean valid = false;
         String name;
+
+        ArrayList<Actor> newActors;
 
         valid = false;
         do {
@@ -742,7 +774,9 @@ public class Filmapp {
                     series.get(serie).setReleaseDate(createDate());
                     break;
                 case 4:
-                    actorSelector(series.get(serie).getActors());
+                    newActors = series.get(serie).getActors();
+                    editActorSelector(newActors);
+                    series.get(serie).setActors(newActors);
                     break;
                 case 5:
                     do {
@@ -784,6 +818,8 @@ public class Filmapp {
             }
         }while (num != 0);
     }
+
+
 
     /**
      * Elimina una película de la lista de películas
@@ -837,10 +873,36 @@ public class Filmapp {
         }
     }
 
+
+    /**
+     * Nos da la opcion de añadir actores a los productos multimedia de una lista de actores ya creados o
+     * crear un añadir un actor nuevo a la lista de actores y, seguidamente, añadirlo al producto multimedia.
+     * @param actorsInMultimedia ArrayList de actores en el producto multimedia
+     */
+    private void addActorSelector(ArrayList<Actor> actorsInMultimedia) {
+        Scanner input = new Scanner(System.in);
+
+        int num = 0;
+
+        System.out.println();
+        System.out.println();
+        System.out.println("* 1 - Añadir actor de la lista de actores");
+        System.out.println("* 2 - Añadir nuevo actor");
+        num = input.nextInt();
+        if (num == 1){
+            num = addActorToMultimediaOnList(actorsInMultimedia);
+            if (num != -1){
+                actorsInMultimedia.add(this.actors.get(num));
+            }
+        }else if (num == 2){
+            addNewActor();
+            actorsInMultimedia.add((this.actors.get(this.actors.size()-1)));
+        }
+    }
     /**
      * Creamos un nuevo actor en la lista de actores disponibles.
      */
-    private void addActor() {
+    private void addNewActor() {
         Scanner input = new Scanner(System.in);
 
         int ageActor = 0;
@@ -882,13 +944,156 @@ public class Filmapp {
                         valid = true;
                     }
                 } catch (InputMismatchException e) {
-                    System.out.println("Valor introducido no válido. Introduce uno válido.");
+                    System.out.println("Valor introducido no válido. Introduce un valor válido.");
                 }
             } while (valid == false);
 
             this.actors.add(new Actor(this.actors.size(), nameActor, lastNameActor, ageActor));
         } while (valid == false);
     }
+
+    /**
+     * Método para añadir un actor de la lista de actores ya creados a la pelicula.
+     * @param actorsInMovie ArrayList de actores en la pelicula
+     * @return int del actor para añadir a la pelicula
+     */
+    private int addActorToMultimediaOnList(ArrayList<Actor> actorsInMovie) {
+        Scanner input = new Scanner(System.in);
+        int num;
+
+        try {
+            printActor(this.actors);
+            System.out.print("Selecciona un actor para la pelicula, o bien -1 para salir: ");
+            num = input.nextInt();
+            if (this.actors.contains(new Actor(num))) {
+                if (actorsInMovie.contains(new Actor(num))) {
+                    System.out.println("El actor ya está en la película");
+                } else {
+                    return num;
+                }
+            }else if(num == -1){
+                System.out.println("Saliendo.");
+                return -1;
+            }else {
+                System.out.println("Introduce un número válido");
+            }
+        }catch (InputMismatchException e) {
+            System.out.println("Valor no válido");
+            input.nextLine();
+        }
+        return -1;
+    }
+    /**
+     * Da las opciones de edicion de un actor en una lista de actores.
+     * @param actors ArrayList de actores
+     */
+    private void editActorSelector(ArrayList<Actor> actors ){
+        Scanner input = new Scanner(System.in);
+
+        int num = 0;
+
+        do {
+            try {
+                System.out.println(actors);;
+                System.out.println("\n* 1 - Añadir un actor.");
+                System.out.println("* 2 - Editar un actor.");
+                System.out.println("* 3 - Eliminar un actor.");
+                System.out.println("* 0 - Cancelar.");
+                num = input.nextInt();
+                switch (num) {
+                    case 1:
+                        addActorSelector(actors);
+                        break;
+                    case 2:
+                        if (actors.size() > 0) {
+                            editActor(actors);
+                        }else {
+                            System.out.println("No hay actores disponibles.");
+                        }
+                        break;
+                    case 3:
+                        if (actors.size() > 0) {
+                            delActor(actors);
+                        }else {
+                            System.out.println("No hay actores disponibles.");
+                        }
+
+                }
+            }catch (InputMismatchException e){
+                System.out.println("Valor no válido. Introduce un valor válido.");
+            }
+
+        }while (num == -1);
+    }
+
+    /**
+     * Editamos un actor de la lista de actores.
+     * @param actors ArrayList de actores.
+     */
+    private void editActor(ArrayList<Actor> actors) {
+        Scanner input = new Scanner(System.in);
+
+        int num = 0, age = 0;
+        String name = "", lastName = "";
+        boolean valid = false;
+
+        do {
+            try {
+                System.out.println("¿Qué actor quieres editar?");
+                for (int i = 0; i < actors.size(); i++) {
+                    System.out.println("* " + i + " - " + actors.get(i));
+                }
+                num = input.nextInt();
+                if (num < 0 || num >= actors.size()) {
+                    System.out.println("Número no válido. Por favor, elige un número válido.");
+                } else {
+                    System.out.print("Introduce el nombre (solo el nombre): ");
+                    input.nextLine();
+                    name = input.nextLine();
+                    System.out.print("\nIntroduce el apellido: ");
+                    lastName = input.nextLine();
+                    do {
+                        try {
+                            System.out.print("Introduce la edad: ");
+                            age = input.nextInt();
+                            valid = true;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Valor no válido. Por favor, introduce un valor válido.");
+                        }
+                    }while (valid == false);
+                }
+                actors.get(num).setAge(age);
+                actors.get(num).setName(name);
+                actors.get(num).setLastName(lastName);
+            }catch (InputMismatchException e){
+                System.out.println("Valor no válido. Por favor, introduce un valor válido.");
+                input.nextLine();
+            }catch (NegativeNumberException e){
+                System.out.println("Valor no válido. Por favor, introduce un valor positivo");
+            }
+        }while (valid == false);
+    }
+    /**
+     * Elimina un actor de la lista de actores
+     * @param actors ArrayList de actores
+     */
+    private void delActor(ArrayList<Actor> actors) {
+        Scanner input = new Scanner(System.in);
+        int num = 0;
+
+        do {
+            try {
+                System.out.println("¿Qué actor quieres eliminar?");
+                printActor(actors);
+                num = input.nextInt();
+                actors.remove(num);
+                System.out.println("Eliminado");
+            }catch (InputMismatchException e){
+                System.out.println("Valor introducido no válido. Introduce un valor válido ");
+            }
+        }while (num < 0 || num >= actors.size());
+    }
+
 
     //Helppers
 
@@ -1008,7 +1213,7 @@ public class Filmapp {
     /**
      * Guarda los elementos multimedia y los actores en el fichero para que los cambios en el programa se guarden
      */
-    public void saveMultimedia() {
+    private void saveMultimedia() {
         try {
             ObjectOutputStream peliculas = new ObjectOutputStream( new FileOutputStream("info/peliculas.dat"));
             peliculas.writeObject( this.movies );
@@ -1029,7 +1234,7 @@ public class Filmapp {
     /**
      * Carga las peliculas desde el fichero en la colecion correspondiente
      */
-    public void loadMovies() {
+    private void loadMovies() {
         try {
             ObjectInputStream peliculas = new ObjectInputStream(new FileInputStream("info/peliculas.dat"));
             this.movies = (ArrayList<Movie>)peliculas.readObject();
@@ -1044,7 +1249,7 @@ public class Filmapp {
     /**
      * Carga las series desde el fichero en la colecion correspondiente
      */
-    public void loadSeries() {
+    private void loadSeries() {
         try {
             ObjectInputStream series = new ObjectInputStream(new FileInputStream("info/series.dat"));
             this.series = (ArrayList<Serie>)series.readObject();
@@ -1059,7 +1264,7 @@ public class Filmapp {
     /**
      * Carga los actores desde el fichero en la colecion correspondiente
      */
-    public void loadActors() {
+    private void loadActors() {
         try {
             ObjectInputStream actors = new ObjectInputStream(new FileInputStream("info/actors.dat"));
             this.actors = (ArrayList<Actor>)actors.readObject();
@@ -1070,6 +1275,4 @@ public class Filmapp {
             e.printStackTrace();
         }
     }
-
-
 }

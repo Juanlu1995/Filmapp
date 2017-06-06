@@ -4,10 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import java.util.InputMismatchException;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Created by juanl on 20/05/2017.
@@ -140,6 +137,53 @@ public class Actor implements Serializable{
         return  Objects.equals(this.getCode(), act.getCode());
 
     }
+
+    /**
+     * Comparador por nombre
+     */
+    public static Comparator ComparatorByName = new Comparator() {
+        @Override
+        public int compare(Object o1, Object o2) {
+            Actor a1 = (Actor) o1;
+            Actor a2 = (Actor) o2;
+
+            return a1.getName().compareToIgnoreCase(a2.getName());
+        }
+    };
+    /**
+     * Comparador por apellidos
+     */
+    public static Comparator ComparatorByLastName = new Comparator() {
+        @Override
+        public int compare(Object o1, Object o2) {
+            Actor a1 = (Actor) o1;
+            Actor a2 = (Actor) o2;
+
+            return a1.getLastName().compareToIgnoreCase(a2.getLastName());
+        }
+    };
+
+    /**
+     * Comparador por edad
+     */
+    public static Comparator ComparatorByAge = new Comparator() {
+        @Override
+        public int compare(Object o1, Object o2) {
+            int result;
+
+            Actor a1 = (Actor) o1;
+            Actor a2 = (Actor) o2;
+
+            result = a2.getAge() - a1.getAge();
+            if (result != 0) {
+                return result;
+            } else {
+                return a1.getName().compareToIgnoreCase(a2.getName());
+            }
+        }
+    };
+
+
 
 
 

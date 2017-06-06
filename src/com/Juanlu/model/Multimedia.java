@@ -102,7 +102,6 @@ public abstract class Multimedia implements Serializable {
     }
 
     public void setName(String name) {
-        name = (Character.toUpperCase(name.charAt(0)) + name.substring(1,name.length()));
         this.name = name;
     }
 
