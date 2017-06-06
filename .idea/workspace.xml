@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Filmapp:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bcd10c1b-bd4b-47f7-abd2-4d24126052b3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info/actors.dat" afterPath="$PROJECT_DIR$/info/actors.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info/peliculas.dat" afterPath="$PROJECT_DIR$/info/peliculas.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info/series.dat" afterPath="$PROJECT_DIR$/info/series.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/controller/Filmapp.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/controller/Filmapp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Actor.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Actor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$1.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$2.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$3.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Actor$3.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Actor$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/model/Actor.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/model/Actor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,28 +28,33 @@
       <file leaf-file-name="Filmapp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="134" column="30" lean-forward="true" selection-start-line="134" selection-start-column="30" selection-end-line="134" selection-end-column="30" />
+            <state relative-caret-position="158">
+              <caret line="897" column="34" lean-forward="false" selection-start-line="897" selection-start-column="34" selection-end-line="897" selection-end-column="34" />
               <folding>
                 <element signature="docComment;class#Filmapp#0" expanded="false" />
                 <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
-                <element signature="method#run#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+                <element signature="method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+                <element signature="docComment;method#actorMenu#0;class#Filmapp#0" expanded="false" />
+                <element signature="method#actorMenu#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
+                <element signature="method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#printActorOptions#0;class#Filmapp#0" expanded="false" />
+                <element signature="method#printActorOptions#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-                <element signature="e#17886#17923#0" expanded="false" />
-                <element signature="e#18557#18591#0" expanded="false" />
+                <element signature="method#addMovie#0;class#Filmapp#0" expanded="false" />
+                <element signature="e#18244#18281#0" expanded="false" />
+                <element signature="e#18915#18949#0" expanded="false" />
                 <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
-                <element signature="e#21406#21441#0" expanded="false" />
-                <element signature="e#22081#22116#0" expanded="false" />
-                <element signature="e#22892#22926#0" expanded="false" />
+                <element signature="e#21764#21799#0" expanded="false" />
+                <element signature="e#22439#22474#0" expanded="false" />
+                <element signature="e#23250#23284#0" expanded="false" />
                 <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#editMovie#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
@@ -60,7 +64,6 @@
                 <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#addActorSelector#0;class#Filmapp#0" expanded="false" />
-                <element signature="method#addActorSelector#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#addNewActor#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#addNewActor#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
@@ -99,9 +102,82 @@
       <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="12726">
               <caret line="657" column="0" lean-forward="false" selection-start-line="657" selection-start-column="0" selection-end-line="657" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#0#124311#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#4677#4678#0" expanded="false" />
+                <element signature="e#4714#4715#0" expanded="false" />
+                <element signature="e#5687#5688#0" expanded="false" />
+                <element signature="e#5750#5751#0" expanded="false" />
+                <element signature="e#13098#13099#0" expanded="false" />
+                <element signature="e#13150#13151#0" expanded="false" />
+                <element signature="e#18781#18782#0" expanded="false" />
+                <element signature="e#18834#18835#0" expanded="false" />
+                <element signature="e#20727#20728#0" expanded="false" />
+                <element signature="e#20771#20772#0" expanded="false" />
+                <element signature="e#21961#21962#0" expanded="false" />
+                <element signature="e#22041#22042#0" expanded="false" />
+                <element signature="e#22786#22787#0" expanded="false" />
+                <element signature="e#22821#22822#0" expanded="false" />
+                <element signature="e#23072#23073#0" expanded="false" />
+                <element signature="e#23112#23113#0" expanded="false" />
+                <element signature="e#29462#29463#0" expanded="false" />
+                <element signature="e#29533#29534#0" expanded="false" />
+                <element signature="e#36393#36394#0" expanded="false" />
+                <element signature="e#36459#36460#0" expanded="false" />
+                <element signature="e#38369#38370#0" expanded="false" />
+                <element signature="e#38423#38424#0" expanded="false" />
+                <element signature="e#47538#47539#0" expanded="false" />
+                <element signature="e#47602#47603#0" expanded="false" />
+                <element signature="e#55800#55801#0" expanded="false" />
+                <element signature="e#55844#55845#0" expanded="false" />
+                <element signature="e#56437#56438#0" expanded="false" />
+                <element signature="e#56514#56515#0" expanded="false" />
+                <element signature="e#58481#58482#0" expanded="false" />
+                <element signature="e#58518#58519#0" expanded="false" />
+                <element signature="e#62860#62861#0" expanded="false" />
+                <element signature="e#62916#62917#0" expanded="false" />
+                <element signature="e#66457#66458#0" expanded="false" />
+                <element signature="e#66495#66496#0" expanded="false" />
+                <element signature="e#70749#70750#0" expanded="false" />
+                <element signature="e#70802#70803#0" expanded="false" />
+                <element signature="e#78240#78241#0" expanded="false" />
+                <element signature="e#78299#78300#0" expanded="false" />
+                <element signature="e#82616#82617#0" expanded="false" />
+                <element signature="e#82667#82668#0" expanded="false" />
+                <element signature="e#82971#82972#0" expanded="false" />
+                <element signature="e#83020#83021#0" expanded="false" />
+                <element signature="e#94598#94599#0" expanded="false" />
+                <element signature="e#94636#94637#0" expanded="false" />
+                <element signature="e#104675#104676#0" expanded="false" />
+                <element signature="e#104730#104731#0" expanded="false" />
+                <element signature="e#111196#111197#0" expanded="false" />
+                <element signature="e#111251#111252#0" expanded="false" />
+                <element signature="e#113343#113344#0" expanded="false" />
+                <element signature="e#113370#113371#0" expanded="false" />
+                <element signature="e#117893#117894#0" expanded="false" />
+                <element signature="e#117955#117956#0" expanded="false" />
+                <element signature="e#118405#118406#0" expanded="false" />
+                <element signature="e#118444#118445#0" expanded="false" />
+                <element signature="e#119456#119457#0" expanded="false" />
+                <element signature="e#119510#119511#0" expanded="false" />
+                <element signature="e#120159#120160#0" expanded="false" />
+                <element signature="e#120213#120214#0" expanded="false" />
+                <element signature="e#120482#120483#0" expanded="false" />
+                <element signature="e#120521#120522#0" expanded="false" />
+                <element signature="e#120889#120890#0" expanded="false" />
+                <element signature="e#120932#120933#0" expanded="false" />
+                <element signature="e#121727#121728#0" expanded="false" />
+                <element signature="e#121769#121770#0" expanded="false" />
+                <element signature="e#122184#122185#0" expanded="false" />
+                <element signature="e#122223#122224#0" expanded="false" />
+                <element signature="e#122645#122646#0" expanded="false" />
+                <element signature="e#122685#122686#0" expanded="false" />
+                <element signature="e#123115#123116#0" expanded="false" />
+                <element signature="e#123156#123157#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,7 +185,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
+            <state relative-caret-position="168">
               <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
@@ -119,13 +195,9 @@
       <file leaf-file-name="Multimedia.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3549">
-              <caret line="181" column="0" lean-forward="true" selection-start-line="172" selection-start-column="4" selection-end-line="181" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2787#2788#0" expanded="true" />
-                <element signature="e#2819#2820#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="3339">
+              <caret line="181" column="0" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="181" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,11 +205,9 @@
       <file leaf-file-name="Movie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
+            <state relative-caret-position="2016">
               <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,11 +215,9 @@
       <file leaf-file-name="Serie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Serie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-203">
+            <state relative-caret-position="1218">
               <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,7 +225,7 @@
       <file leaf-file-name="Actor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/Actor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="2457">
               <caret line="176" column="37" lean-forward="false" selection-start-line="176" selection-start-column="37" selection-end-line="176" selection-end-column="37" />
               <folding>
                 <element signature="docComment;method#Actor#1;class#Actor#0" expanded="false" />
@@ -322,9 +390,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -334,6 +402,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Filmapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filmapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filmapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -435,6 +517,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filmapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filmapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artifacts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filmapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filmapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="info" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -446,10 +560,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Torre-de-Control" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="SearchEverywhereHistoryKey" value="default&#9;ACTION&#9;TemplateProjectProperties&#10;foreach&#9;null&#9;null" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -915,7 +1032,9 @@
       <workItem from="1496430993355" duration="4594000" />
       <workItem from="1496527121802" duration="2250000" />
       <workItem from="1496697382671" duration="9495000" />
-      <workItem from="1496748457296" duration="10971000" />
+      <workItem from="1496748457296" duration="11145000" />
+      <workItem from="1496763698242" duration="948000" />
+      <workItem from="1496771170850" duration="922000" />
     </task>
     <task id="LOCAL-00001" summary="Error en la impresion de la fecha">
       <created>1496355515072</created>
@@ -949,7 +1068,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101647000" />
+    <option name="totallyTimeSpent" value="103691000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -962,7 +1081,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -973,20 +1091,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30690828" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41676104" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12781955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13104188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1734694" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="1" y="655" width="253" height="374" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1024,9 +1142,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
           <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,11 +1150,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,9 +1173,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,22 +1193,27 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#actorMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#actorMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActorOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printActorOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#17886#17923#0" expanded="false" />
-            <element signature="e#18557#18591#0" expanded="false" />
+            <element signature="method#addMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#18244#18281#0" expanded="false" />
+            <element signature="e#18915#18949#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#21406#21441#0" expanded="false" />
-            <element signature="e#22081#22116#0" expanded="false" />
-            <element signature="e#22892#22926#0" expanded="false" />
+            <element signature="e#21764#21799#0" expanded="false" />
+            <element signature="e#22439#22474#0" expanded="false" />
+            <element signature="e#23250#23284#0" expanded="false" />
             <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
@@ -1108,7 +1223,6 @@
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
@@ -1148,9 +1262,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
           <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,11 +1270,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,9 +1293,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,22 +1313,27 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#actorMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#actorMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActorOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printActorOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#17886#17923#0" expanded="false" />
-            <element signature="e#18557#18591#0" expanded="false" />
+            <element signature="method#addMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#18244#18281#0" expanded="false" />
+            <element signature="e#18915#18949#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#21406#21441#0" expanded="false" />
-            <element signature="e#22081#22116#0" expanded="false" />
-            <element signature="e#22892#22926#0" expanded="false" />
+            <element signature="e#21764#21799#0" expanded="false" />
+            <element signature="e#22439#22474#0" expanded="false" />
+            <element signature="e#23250#23284#0" expanded="false" />
             <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
@@ -1232,7 +1343,6 @@
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
@@ -1272,9 +1382,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="966">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,9 +1390,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
           <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1292,11 +1398,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1331,22 +1433,27 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#actorMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#actorMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActorOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printActorOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#17886#17923#0" expanded="false" />
-            <element signature="e#18557#18591#0" expanded="false" />
+            <element signature="method#addMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#18244#18281#0" expanded="false" />
+            <element signature="e#18915#18949#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#21406#21441#0" expanded="false" />
-            <element signature="e#22081#22116#0" expanded="false" />
-            <element signature="e#22892#22926#0" expanded="false" />
+            <element signature="e#21764#21799#0" expanded="false" />
+            <element signature="e#22439#22474#0" expanded="false" />
+            <element signature="e#23250#23284#0" expanded="false" />
             <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
@@ -1356,7 +1463,6 @@
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
@@ -1396,9 +1502,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="966">
           <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,11 +1510,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,9 +1533,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
           <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,9 +1550,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="861">
           <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1462,9 +1558,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1472,11 +1566,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="27" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1503,22 +1593,27 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#actorMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#actorMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActorOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printActorOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#17886#17923#0" expanded="false" />
-            <element signature="e#18557#18591#0" expanded="false" />
+            <element signature="method#addMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#18244#18281#0" expanded="false" />
+            <element signature="e#18915#18949#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#21406#21441#0" expanded="false" />
-            <element signature="e#22081#22116#0" expanded="false" />
-            <element signature="e#22892#22926#0" expanded="false" />
+            <element signature="e#21764#21799#0" expanded="false" />
+            <element signature="e#22439#22474#0" expanded="false" />
+            <element signature="e#23250#23284#0" expanded="false" />
             <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
@@ -1528,7 +1623,6 @@
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
@@ -1576,9 +1670,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="861">
           <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1586,9 +1678,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1596,11 +1686,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="27" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1627,22 +1713,27 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#actorMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#actorMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActorOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printActorOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#17886#17923#0" expanded="false" />
-            <element signature="e#18557#18591#0" expanded="false" />
+            <element signature="method#addMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#18244#18281#0" expanded="false" />
+            <element signature="e#18915#18949#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#21406#21441#0" expanded="false" />
-            <element signature="e#22081#22116#0" expanded="false" />
-            <element signature="e#22892#22926#0" expanded="false" />
+            <element signature="e#21764#21799#0" expanded="false" />
+            <element signature="e#22439#22474#0" expanded="false" />
+            <element signature="e#23250#23284#0" expanded="false" />
             <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
@@ -1652,7 +1743,6 @@
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
@@ -1705,35 +1795,104 @@
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Documentary.java" />
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
+        <state relative-caret-position="2016">
           <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Serie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
+        <state relative-caret-position="1218">
           <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="12726">
           <caret line="657" column="0" lean-forward="false" selection-start-line="657" selection-start-column="0" selection-end-line="657" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#124311#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4677#4678#0" expanded="false" />
+            <element signature="e#4714#4715#0" expanded="false" />
+            <element signature="e#5687#5688#0" expanded="false" />
+            <element signature="e#5750#5751#0" expanded="false" />
+            <element signature="e#13098#13099#0" expanded="false" />
+            <element signature="e#13150#13151#0" expanded="false" />
+            <element signature="e#18781#18782#0" expanded="false" />
+            <element signature="e#18834#18835#0" expanded="false" />
+            <element signature="e#20727#20728#0" expanded="false" />
+            <element signature="e#20771#20772#0" expanded="false" />
+            <element signature="e#21961#21962#0" expanded="false" />
+            <element signature="e#22041#22042#0" expanded="false" />
+            <element signature="e#22786#22787#0" expanded="false" />
+            <element signature="e#22821#22822#0" expanded="false" />
+            <element signature="e#23072#23073#0" expanded="false" />
+            <element signature="e#23112#23113#0" expanded="false" />
+            <element signature="e#29462#29463#0" expanded="false" />
+            <element signature="e#29533#29534#0" expanded="false" />
+            <element signature="e#36393#36394#0" expanded="false" />
+            <element signature="e#36459#36460#0" expanded="false" />
+            <element signature="e#38369#38370#0" expanded="false" />
+            <element signature="e#38423#38424#0" expanded="false" />
+            <element signature="e#47538#47539#0" expanded="false" />
+            <element signature="e#47602#47603#0" expanded="false" />
+            <element signature="e#55800#55801#0" expanded="false" />
+            <element signature="e#55844#55845#0" expanded="false" />
+            <element signature="e#56437#56438#0" expanded="false" />
+            <element signature="e#56514#56515#0" expanded="false" />
+            <element signature="e#58481#58482#0" expanded="false" />
+            <element signature="e#58518#58519#0" expanded="false" />
+            <element signature="e#62860#62861#0" expanded="false" />
+            <element signature="e#62916#62917#0" expanded="false" />
+            <element signature="e#66457#66458#0" expanded="false" />
+            <element signature="e#66495#66496#0" expanded="false" />
+            <element signature="e#70749#70750#0" expanded="false" />
+            <element signature="e#70802#70803#0" expanded="false" />
+            <element signature="e#78240#78241#0" expanded="false" />
+            <element signature="e#78299#78300#0" expanded="false" />
+            <element signature="e#82616#82617#0" expanded="false" />
+            <element signature="e#82667#82668#0" expanded="false" />
+            <element signature="e#82971#82972#0" expanded="false" />
+            <element signature="e#83020#83021#0" expanded="false" />
+            <element signature="e#94598#94599#0" expanded="false" />
+            <element signature="e#94636#94637#0" expanded="false" />
+            <element signature="e#104675#104676#0" expanded="false" />
+            <element signature="e#104730#104731#0" expanded="false" />
+            <element signature="e#111196#111197#0" expanded="false" />
+            <element signature="e#111251#111252#0" expanded="false" />
+            <element signature="e#113343#113344#0" expanded="false" />
+            <element signature="e#113370#113371#0" expanded="false" />
+            <element signature="e#117893#117894#0" expanded="false" />
+            <element signature="e#117955#117956#0" expanded="false" />
+            <element signature="e#118405#118406#0" expanded="false" />
+            <element signature="e#118444#118445#0" expanded="false" />
+            <element signature="e#119456#119457#0" expanded="false" />
+            <element signature="e#119510#119511#0" expanded="false" />
+            <element signature="e#120159#120160#0" expanded="false" />
+            <element signature="e#120213#120214#0" expanded="false" />
+            <element signature="e#120482#120483#0" expanded="false" />
+            <element signature="e#120521#120522#0" expanded="false" />
+            <element signature="e#120889#120890#0" expanded="false" />
+            <element signature="e#120932#120933#0" expanded="false" />
+            <element signature="e#121727#121728#0" expanded="false" />
+            <element signature="e#121769#121770#0" expanded="false" />
+            <element signature="e#122184#122185#0" expanded="false" />
+            <element signature="e#122223#122224#0" expanded="false" />
+            <element signature="e#122645#122646#0" expanded="false" />
+            <element signature="e#122685#122686#0" expanded="false" />
+            <element signature="e#123115#123116#0" expanded="false" />
+            <element signature="e#123156#123157#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
+        <state relative-caret-position="168">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
@@ -1741,19 +1900,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3549">
-          <caret line="181" column="0" lean-forward="true" selection-start-line="172" selection-start-column="4" selection-end-line="181" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3339">
+          <caret line="181" column="0" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="181" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="2457">
           <caret line="176" column="37" lean-forward="false" selection-start-line="176" selection-start-column="37" selection-end-line="176" selection-end-column="37" />
           <folding>
             <element signature="docComment;method#Actor#1;class#Actor#0" expanded="false" />
@@ -1768,28 +1923,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="134" column="30" lean-forward="true" selection-start-line="134" selection-start-column="30" selection-end-line="134" selection-end-column="30" />
+        <state relative-caret-position="158">
+          <caret line="897" column="34" lean-forward="false" selection-start-line="897" selection-start-column="34" selection-end-line="897" selection-end-column="34" />
           <folding>
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#seriesMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#actorMenu#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#actorMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printMovieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActorOptions#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printActorOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#17886#17923#0" expanded="false" />
-            <element signature="e#18557#18591#0" expanded="false" />
+            <element signature="method#addMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#18244#18281#0" expanded="false" />
+            <element signature="e#18915#18949#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#21406#21441#0" expanded="false" />
-            <element signature="e#22081#22116#0" expanded="false" />
-            <element signature="e#22892#22926#0" expanded="false" />
+            <element signature="e#21764#21799#0" expanded="false" />
+            <element signature="e#22439#22474#0" expanded="false" />
+            <element signature="e#23250#23284#0" expanded="false" />
             <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#editMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
@@ -1799,7 +1959,6 @@
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#addNewActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
@@ -1834,5 +1993,82 @@
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>Filmapp:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Filmapp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

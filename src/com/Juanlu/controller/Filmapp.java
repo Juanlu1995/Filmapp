@@ -55,6 +55,7 @@ public class Filmapp {
             System.out.println("* 0 - Salir                                             *");
             System.out.println("*                                                       *");
             System.out.println("*********************************************************");
+            System.out.print("Opcion: ");
             index = selector();
             switch (index){
                 case 1:
@@ -145,7 +146,7 @@ public class Filmapp {
             System.out.println("* 0 - Atrás                                             *");
             System.out.println("*                                                       *");
             System.out.println("*********************************************************");
-
+            System.out.print("Opcion: ");
             index = selector();
             switch (index) {
                 case 1:
@@ -169,6 +170,9 @@ public class Filmapp {
             }
         }while (index != 0);
     }
+    /**
+     * Muestra el menú de qué se puede hacer con los actores y el número correspondiente para interactuar con ellos.
+     */
     private void actorMenu() {
         Scanner input = new Scanner(System.in);
 
@@ -184,6 +188,7 @@ public class Filmapp {
                 System.out.println("* 0 - Atrás                                             *");
                 System.out.println("*                                                       *");
                 System.out.println("*********************************************************");
+                System.out.print("Opcion: ");
                 num = input.nextInt();
 
                 switch (num) {
@@ -229,7 +234,7 @@ public class Filmapp {
                 System.out.println("* 0 - Salir                                             *");
                 System.out.println("*                                                       *");
                 System.out.println("*********************************************************");
-
+                System.out.println("Opcion: ");
                 num = selector();
 
                 switch (num) {
@@ -339,7 +344,7 @@ public class Filmapp {
                     System.out.println("* 0 - Salir                                             *");
                     System.out.println("*                                                       *");
                     System.out.println("*********************************************************");
-
+                    System.out.print("Opcion: ");
                     num = selector();
 
                     switch (num) {
@@ -786,13 +791,14 @@ public class Filmapp {
                             input.nextLine();
                             series.get(serie).setSeasons(seasons);
                             valid = true;
-                            break;
+
                         } catch (InputMismatchException e) {
                             System.out.println("Valor no válido. Por favor, introduce un valor válido.");
                         } catch (NegativeNumberException e) {
                             System.out.println("No se pueden establecer un numero de temporadas en negativo.");
                         }
                     } while (valid == false);
+                    break;
                 case 6:
                     do {
                         try {
@@ -808,6 +814,7 @@ public class Filmapp {
                             System.out.println("No se pueden establecer un numero de capítulos en negativo.");
                         }
                     } while (valid == false);
+                    break;
                 case 0:
                     System.out.println("Volviendo al menú series.");
                     break;
@@ -888,6 +895,7 @@ public class Filmapp {
         System.out.println();
         System.out.println("* 1 - Añadir actor de la lista de actores");
         System.out.println("* 2 - Añadir nuevo actor");
+        System.out.print("Opcion: ");
         num = input.nextInt();
         if (num == 1){
             num = addActorToMultimediaOnList(actorsInMultimedia);
