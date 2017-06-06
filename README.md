@@ -7,7 +7,7 @@
 <br>
 <br>
 
-####Tabla de contenido
+#### Tabla de contenido
 1. Introducción.
 2. Objetivo del manual.
 3. Instrucciones de uso.
