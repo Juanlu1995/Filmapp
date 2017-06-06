@@ -2,6 +2,7 @@ package com.Juanlu.controller;
 
 import com.Juanlu.model.Actor;
 import com.Juanlu.model.Multimedia;
+import com.Juanlu.model.NegativeNumberException;
 import com.Juanlu.model.multimedia.Movie;
 import com.Juanlu.model.multimedia.Serie;
 
@@ -103,7 +104,8 @@ public class Filmapp {
             System.out.println("*                       Peliculas                       *");
             System.out.println("* 1 - Ver lista de peliculas ordenadas por...           *");
             System.out.println("* 2 - Añadir pelicula                                   *");
-            System.out.println("* 3 - Eliminar pelicula                                 *");
+            System.out.println("* 3 - Modificar pelicula                                *");
+            System.out.println("* 4 - Eliminar pelicula                                 *");
             System.out.println("* 0 - Atrás                                             *");
             System.out.println("*                                                       *");
             System.out.println("*********************************************************");
@@ -118,6 +120,9 @@ public class Filmapp {
                     addMovie();
                     break;
                 case 3:
+                    editMovie();
+                    break;
+                case 4:
                     delMovie();
                     break;
                 case 0:
@@ -129,6 +134,8 @@ public class Filmapp {
             }
         }while (index != 0);
     }
+
+
     /**
      * Muestra el menú de qué se puede hacer con las series y el número correspondiente para interactuar con ellas.
      */
@@ -140,6 +147,7 @@ public class Filmapp {
             System.out.println("*                        Series                         *");
             System.out.println("* 1 - Ver lista de series ordenadas por...              *");
             System.out.println("* 2 - Añadir series                                     *");
+            System.out.println("* 3 - Modificar serie                                   *");
             System.out.println("* 3 - Eliminar serie                                    *");
             System.out.println("* 0 - Atrás                                             *");
             System.out.println("*                                                       *");
@@ -154,6 +162,9 @@ public class Filmapp {
                     addSerie();
                     break;
                 case 3:
+                    editSerie();
+                    break;
+                case 4:
                     delSerie();
                     break;
                 case 0:
@@ -172,7 +183,7 @@ public class Filmapp {
      * Nos imprime las posibilidades de ordenamiento de las las peliculas, así como el numero correspondiente para
      * acceder a dicha opcion.
      *
-     * @see #printMovies(ArrayList)
+     * @see #printMovies()
      */
     private void printMovieOptions() {
         int num;
@@ -194,19 +205,19 @@ public class Filmapp {
                 switch (num) {
                     case 1:
                         Collections.sort(this.movies, Multimedia.ComparatorByScore);
-                        printMovies(this.movies);
+                        printMovies();
                         break;
                     case 2:
                         Collections.sort(this.movies, Multimedia.ComparatorByName);
-                        printMovies(this.movies);
+                        printMovies();
                         break;
                     case 3:
                         Collections.sort(this.movies, Multimedia.ComparatorByDate);
-                        printMovies(this.movies);
+                        printMovies();
                         break;
                     case 4:
                         Collections.sort(this.movies, Movie.ComparatorByBudget);
-                        printMovies(this.movies);
+                        printMovies();
                         break;
                     case 0:
                         System.out.println("Volviendo al menú Peliculas");
@@ -227,7 +238,7 @@ public class Filmapp {
      * Nos imprime las posibilidades de ordenamiento de las las series, así como el numero correspondiente para
      * acceder a dicha opcion.
      *
-     * @see #printSeries(ArrayList)
+     * @see #printSeries()
      */
     private void printSerieOptions() {
         int num;
@@ -248,19 +259,19 @@ public class Filmapp {
                 switch (num) {
                     case 1:
                         Collections.sort(this.series, Multimedia.ComparatorByScore);
-                        printSeries(series);
+                        printSeries();
                         break;
                     case 2:
                         Collections.sort(this.series, Multimedia.ComparatorByName);
-                        printSeries(series);
+                        printSeries();
                         break;
                     case 3:
                         Collections.sort(this.series, Multimedia.ComparatorByDate);
-                        printSeries(series);
+                        printSeries();
                         break;
                     case 4:
                         Collections.sort(this.series, Serie.ComparatosByChaptes);
-                        printSeries(series);
+                        printSeries();
                         break;
                     case 0:
                         System.out.println("Volviendo al menú Series");
@@ -309,12 +320,12 @@ public class Filmapp {
         } while (valid == false);
 
         valid = false;
-        //Damos una puntuacion a la pelicula entre 0 y 100.
+        //Damos una puntuacion a la pelicula entre 0 y 10.
         do {
             try {
-                System.out.print("\nPuntuacion de la pelicula (0-100): ");
+                System.out.print("\nPuntuacion de la pelicula (0-10): ");
                 score = input.nextDouble();
-                if (score <= 100 && score >= 0) {
+                if (score <= 10 && score >= 0) {
                     valid = true;
                 } else {
                     System.out.println("Numero no valido, tiene que ser entre 0 y 100");
@@ -411,12 +422,12 @@ public class Filmapp {
         } while (valid == false);
 
         valid = false;
-        //Damos una puntuacion a la serie entre 0 y 100.
+        //Damos una puntuacion a la serie entre 0 y 10.
         do {
             try {
-                System.out.print("\nPuntuacion de la serie (0-100): ");
+                System.out.print("\nPuntuacion de la serie (0-10): ");
                 score = input.nextDouble();
-                if (score <= 100 && score >= 0) {
+                if (score <= 10 && score >= 0) {
                     valid = true;
                 } else {
                     System.out.println("Numero no valido, tiene que ser entre 0 y 100");
@@ -548,7 +559,7 @@ public class Filmapp {
 
         try {
             printActor(this.actors);
-            System.out.print("Selecciona un actor para la pelicula: ");
+            System.out.print("Selecciona un actor para la pelicula, o bien -1 para salir: ");
             num = input.nextInt();
             if (this.actors.contains(new Actor(num))) {
                 if (actorsInMovie.contains(new Actor(num))) {
@@ -556,7 +567,10 @@ public class Filmapp {
                 } else {
                     return num;
                 }
-            } else {
+            }else if(num == -1){
+                System.out.println("Saliendo.");
+                return -1;
+            }else {
                 System.out.println("Introduce un número válido");
             }
         }catch (InputMismatchException e) {
@@ -565,7 +579,211 @@ public class Filmapp {
         }
         return -1;
     }
+//TODO que se pueda editar un actor en concreto.
+    /**
+     * Modifíca los valores de la pelicula.
+     * Nos muestra un menú por el cual pordemos interactuar,
+     * permitiéndonos modificar cada uno de los atributos de la película
+     */
+    private void editMovie() {
+        Scanner input = new Scanner(System.in);
 
+        int movie = 0, num = 0;
+        double budget = 0,score;
+        boolean valid = false;
+        String name;
+
+        valid = false;
+        do {
+            try {
+                System.out.println("\n\n¿Qué película quieres editar?\n");
+                printMovies();
+                movie = input.nextInt();
+                valid = true;
+            } catch (InputMismatchException e) {
+                input.nextLine();
+                System.out.println("Valor no válido. Por favor, introduce un valor válido");
+            }
+        } while (valid == false);
+        valid = false;
+        do {
+            try {
+                System.out.println("¿Qué quieres modificar?");
+                System.out.println("* 1 - Nombre");
+                System.out.println("* 2 - Puntuacion");
+                System.out.println("* 3 - Fecha de estreno");
+                System.out.println("* 4 - Actores");
+                System.out.println("* 5 - Presupuesto");
+                System.out.println("* 0 - Volver.");
+                System.out.println(movies.get(movie));
+                num = input.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Valor no válido. Por favor, introduce un valor válido");
+                input.nextLine();
+            }
+
+            switch (num) {
+                case 1:
+                    System.out.print("Introduce el nuevo nombre: ");
+                    name = input.nextLine();
+                    input.nextLine();
+                    movies.get(movie).setName(name);
+                    break;
+                case 2:
+                    do {
+                        try {
+                            System.out.print("Introduce la nueva puntuacion: ");
+                            score = input.nextDouble();
+                            movies.get(movie).setScore(score);
+                            valid = true;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Valor no válido. Por favor, introduce un valor válido.");
+                            input.nextLine();
+                        }
+                    } while (valid == false);
+                    break;
+                case 3:
+                    System.out.println("Introduce la nueva fecha de estreno: ");
+                    movies.get(movie).setReleaseDate(createDate());
+                    break;
+                case 4:
+                    actorSelector(movies.get(movie).getActors());
+                    break;
+                case 5:
+                    do {
+                        try {
+                            System.out.print("Introduce el nuevo presupuesto: ");
+                            budget = input.nextDouble();
+                            input.nextLine();
+                            movies.get(movie).setBudget(budget);
+                            valid = true;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Valor no válido. Por favor, introduce un valor válido.");
+                        } catch (NegativeNumberException e) {
+                            System.out.println("No se pueden establecer un presupuesto negativo.");
+                        }
+                    } while (valid == false);
+                    break;
+                case 0:
+                    System.out.println("Volviendo al menú películas.");
+                    break;
+
+                default:
+                    System.out.println("Número no válido. Por favor, introduce un número válido.");
+
+            }
+        }while (num != 0);
+    }
+
+    /**
+     * Modifíca los valores de la serie.
+     * Nos muestra un menú por el cual pordemos interactuar,
+     * permitiéndonos modificar todos y cada uno de los atributos de la serie
+     */
+    private void editSerie() {
+        Scanner input = new Scanner(System.in);
+
+        int serie = 0, num = 0, seasons = 0, chapters = 0;
+        boolean valid = false;
+        String name;
+
+        valid = false;
+        do {
+            try {
+                System.out.println("\n\n¿Qué serie quieres editar?");
+                printSeries();
+                serie = input.nextInt();
+                valid = true;
+            } catch (InputMismatchException e) {
+                input.nextLine();
+                System.out.println("Valor no válido. Por favor, introduce un valor válido");
+            }
+        } while (valid == false);
+        valid = false;
+        do {
+            try {
+                System.out.println("¿Qué quieres modificar?");
+                System.out.println("* 1 - Nombre");
+                System.out.println("* 2 - Puntuacion");
+                System.out.println("* 3 - Fecha de estreno");
+                System.out.println("* 4 - Actores");
+                System.out.println("* 5 - Temporadas");
+                System.out.println("* 6 - Capítulos");
+                System.out.println("* 0 - Cancelar.");
+                System.out.println(series.get(serie));
+                num = input.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Valor no válido. Por favor, introduce un valor válido");
+                input.nextLine();
+            }
+
+            switch (num) {
+                case 1:
+                    System.out.print("Introduce el nuevo nombre: ");
+                    name = input.nextLine();
+                    input.nextLine();
+                    series.get(serie).setName(name);
+                    break;
+                case 2:
+                    do {
+                        try {
+                            System.out.print("Introduce la nueva puntuacion: ");
+                            num = input.nextInt();
+                            input.nextLine();
+                            series.get(serie).setScore(num);
+                            valid = true;
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Valor no válido. Por favor, introduce un valor válido.");
+                        }
+                    } while (valid == false);
+                case 3:
+                    System.out.println("Introduce la nueva fecha de estreno: ");
+                    series.get(serie).setReleaseDate(createDate());
+                    break;
+                case 4:
+                    actorSelector(series.get(serie).getActors());
+                    break;
+                case 5:
+                    do {
+                        try {
+                            System.out.print("Introduce el numero de temporadas: ");
+                            seasons = input.nextInt();
+                            input.nextLine();
+                            series.get(serie).setSeasons(seasons);
+                            valid = true;
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Valor no válido. Por favor, introduce un valor válido.");
+                        } catch (NegativeNumberException e) {
+                            System.out.println("No se pueden establecer un numero de temporadas en negativo.");
+                        }
+                    } while (valid == false);
+                case 6:
+                    do {
+                        try {
+                            System.out.print("Introduce el numero de capítulos: ");
+                            chapters = input.nextInt();
+                            input.nextLine();
+                            series.get(serie).setChapters(chapters);
+                            valid = true;
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Valor no válido. Por favor, introduce un valor válido.");
+                        } catch (NegativeNumberException e) {
+                            System.out.println("No se pueden establecer un numero de capítulos en negativo.");
+                        }
+                    } while (valid == false);
+                case 0:
+                    System.out.println("Volviendo al menú series.");
+                    break;
+
+                default:
+                    System.out.println("Número no válido. Por favor, introduce un número válido.");
+
+            }
+        }while (num != 0);
+    }
 
     /**
      * Elimina una película de la lista de películas
@@ -575,9 +793,9 @@ public class Filmapp {
         int num;
         if (this.movies.size() > 0) {
             try {
-                System.out.println("Lista de películas: ");
+                System.out.println("\nLista de películas: ");
                 Collections.sort(this.movies,Multimedia.ComparatorByName);
-                printMovies(this.movies);
+                printMovies();
                 System.out.print("Pelicula para borrar: ");
                 num = input.nextInt();
                 if (num <= 0 || num >= this.movies.size()) {
@@ -600,9 +818,9 @@ public class Filmapp {
         int num;
         if (this.series.size() > 0) {
             try {
-                System.out.println("Lista de Series: ");
+                System.out.println("\nLista de Series: ");
 
-                printSeries(this.series);
+                printSeries();
                 System.out.print("Pelicula para borrar: ");
                 Collections.sort(this.series,Multimedia.ComparatorByName);
                 num = input.nextInt();
@@ -631,13 +849,14 @@ public class Filmapp {
 
         do {
             try {
-                System.out.print("Nombre del actor (sólo nombre): ");
+                System.out.print("\nNombre del actor (sólo nombre): ");
                 nameActor = input.nextLine();
                 if (nameActor.length() > 0) {
                     valid = true;
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Valor no válido.");
+                input.nextLine();
             }
         } while (valid == false);
         valid = false;
@@ -648,6 +867,7 @@ public class Filmapp {
                 valid = true;
             } catch (InputMismatchException e) {
                 System.out.println("Valor no válido.");
+                input.nextLine();
             }
             while (valid == false) ;
             valid = false;
@@ -658,6 +878,8 @@ public class Filmapp {
                     if (ageActor < 0) {
                         System.out.println("La edad no puede ser negativa. Introduce un número válido.");
                         valid = false;
+                    }else {
+                        valid = true;
                     }
                 } catch (InputMismatchException e) {
                     System.out.println("Valor introducido no válido. Introduce uno válido.");
@@ -742,20 +964,19 @@ public class Filmapp {
 
     /**
      * Hellpper para la impresion de peliculas.
-     * @param movies ArrayList de peliculas.
      */
-    private static void printMovies(ArrayList<Movie> movies){
-        for (int i = 0; i < movies.size() ; i++) {
+    private void printMovies(){
+
+        for (int i = 0; i < this.movies.size() ; i++) {
             System.out.println("* " + i + " - " + movies.get(i));
         }
     }
 
     /**
      * Hellpper para la impresion de series.
-     * @param series ArrayList de series.
      */
-    private static void printSeries(ArrayList<Serie> series) {
-        for (int i = 0; i < series.size() ; i++) {
+    private void printSeries() {
+        for (int i = 0; i < this.series.size() ; i++) {
             System.out.println("* " + i + " - " + series.get(i));
         }
     }
@@ -764,11 +985,13 @@ public class Filmapp {
      * Imprime una lista general de todos los contenidos multimedias que tenemos en nuestro programa
      */
     private void printGenaralList() {
-        System.out.println("\n*********************   PELICULAS   *********************");
-        printMovies(this.movies);
+        System.out.println("\n\n\n*********************   PELICULAS   *********************");
+        Collections.sort(movies,Multimedia.ComparatorByScore);
+        printMovies();
         System.out.println("\n***********************   SERIES   ***********************");
-        printSeries(this.series);
-        System.out.println();
+        Collections.sort(series,Multimedia.ComparatorByScore);
+        printSeries();
+
     }
 
     /**
@@ -782,8 +1005,9 @@ public class Filmapp {
     }
 
 
-
-
+    /**
+     * Guarda los elementos multimedia y los actores en el fichero para que los cambios en el programa se guarden
+     */
     public void saveMultimedia() {
         try {
             ObjectOutputStream peliculas = new ObjectOutputStream( new FileOutputStream("info/peliculas.dat"));
@@ -802,6 +1026,9 @@ public class Filmapp {
         }
     }
 
+    /**
+     * Carga las peliculas desde el fichero en la colecion correspondiente
+     */
     public void loadMovies() {
         try {
             ObjectInputStream peliculas = new ObjectInputStream(new FileInputStream("info/peliculas.dat"));
@@ -813,6 +1040,10 @@ public class Filmapp {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Carga las series desde el fichero en la colecion correspondiente
+     */
     public void loadSeries() {
         try {
             ObjectInputStream series = new ObjectInputStream(new FileInputStream("info/series.dat"));
@@ -824,6 +1055,10 @@ public class Filmapp {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Carga los actores desde el fichero en la colecion correspondiente
+     */
     public void loadActors() {
         try {
             ObjectInputStream actors = new ObjectInputStream(new FileInputStream("info/actors.dat"));

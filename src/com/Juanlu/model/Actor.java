@@ -146,8 +146,8 @@ public class Actor implements Serializable{
     //TODO arreglar el toString. No se distinguen cuando empieza un actor y otro.
     @Override
     public String toString() {
-        String completeName = name + lastName;
-        return  "Nombre: " + completeName +
+        String completeName = name + " " + lastName;
+        return  "\n\t\t\tNombre: " + completeName +
                 ", edad: " + age;
     }
 }

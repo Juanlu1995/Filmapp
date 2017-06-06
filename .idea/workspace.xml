@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcd10c1b-bd4b-47f7-abd2-4d24126052b3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info/actors.dat" afterPath="$PROJECT_DIR$/info/actors.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info/peliculas.dat" afterPath="$PROJECT_DIR$/info/peliculas.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/controller/Filmapp.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/controller/Filmapp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Actor.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Actor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$1.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$2.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$3.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/Multimedia.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/multimedia/Serie$1.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/multimedia/Serie$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/multimedia/Serie.class" afterPath="$PROJECT_DIR$/out/production/Filmapp/com/Juanlu/model/multimedia/Serie.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/Main.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/model/Actor.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/model/Actor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Movie.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Movie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Serie.java" afterPath="$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Serie.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,16 +26,18 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Filmapp.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Filmapp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="477" column="12" lean-forward="true" selection-start-line="477" selection-start-column="12" selection-end-line="477" selection-end-column="12" />
+            <state relative-caret-position="162">
+              <caret line="581" column="48" lean-forward="false" selection-start-line="581" selection-start-column="48" selection-end-line="581" selection-end-column="48" />
               <folding>
                 <element signature="docComment;class#Filmapp#0" expanded="false" />
                 <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
+                <element signature="method#run#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#printListToDo#0;class#Filmapp#0" expanded="false" />
+                <element signature="method#printListToDo#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
@@ -45,19 +47,21 @@
                 <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-                <element signature="e#11902#11909#0" expanded="true" />
-                <element signature="e#13049#13086#0" expanded="false" />
-                <element signature="e#13720#13754#0" expanded="false" />
+                <element signature="e#13365#13402#0" expanded="false" />
+                <element signature="e#14036#14070#0" expanded="false" />
                 <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
-                <element signature="e#15434#15441#0" expanded="true" />
-                <element signature="e#16569#16604#0" expanded="false" />
-                <element signature="e#17244#17279#0" expanded="false" />
+                <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
+                <element signature="e#16882#16917#0" expanded="false" />
+                <element signature="e#17557#17592#0" expanded="false" />
+                <element signature="e#18368#18402#0" expanded="false" />
                 <element signature="docComment;method#actorSelector#0;class#Filmapp#0" expanded="false" />
-                <element signature="method#actorSelector#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
-                <element signature="method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
+                <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
+                <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#delMovie#0;class#Filmapp#0" expanded="false" />
+                <element signature="method#delMovie#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
+                <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#addActor#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#selector#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#selector#0;class#Filmapp#0" expanded="false" />
@@ -69,9 +73,13 @@
                 <element signature="docComment;method#printGenaralList#0;class#Filmapp#0" expanded="false" />
                 <element signature="docComment;method#printActor#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#printActor#0;class#Filmapp#0" expanded="false" />
+                <element signature="docComment;method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
+                <element signature="docComment;method#loadMovies#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#loadMovies#0;class#Filmapp#0" expanded="false" />
+                <element signature="docComment;method#loadSeries#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#loadSeries#0;class#Filmapp#0" expanded="false" />
+                <element signature="docComment;method#loadActors#0;class#Filmapp#0" expanded="false" />
                 <element signature="method#loadActors#0;class#Filmapp#0" expanded="false" />
               </folding>
             </state>
@@ -88,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Multimedia.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Multimedia.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="190" column="6" lean-forward="false" selection-start-line="190" selection-start-column="6" selection-end-line="190" selection-end-column="6" />
+            <state relative-caret-position="467">
+              <caret line="95" column="99" lean-forward="false" selection-start-line="95" selection-start-column="99" selection-end-line="95" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#equals#0;class#Multimedia#0" expanded="false" />
@@ -104,7 +112,7 @@
       <file leaf-file-name="Movie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="805">
               <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -116,8 +124,8 @@
       <file leaf-file-name="Serie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Serie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+            <state relative-caret-position="269">
+              <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,8 +136,8 @@
       <file leaf-file-name="Actor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/Actor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="145" column="81" lean-forward="false" selection-start-line="145" selection-start-column="81" selection-end-line="145" selection-end-column="81" />
+            <state relative-caret-position="410">
+              <caret line="149" column="19" lean-forward="false" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
               <folding>
                 <element signature="docComment;method#Actor#1;class#Actor#0" expanded="false" />
                 <element signature="method#Actor#1;class#Actor#0" expanded="false" />
@@ -173,6 +181,14 @@
       <find>menu princ</find>
       <find>getN</find>
       <find>edad</find>
+      <find>quieres edi</find>
+      <find>peló</find>
+      <find>season</find>
+      <find>edad del</find>
+      <find>system.out</find>
+      <find>puntua</find>
+      <find>edita</find>
+      <find>getR</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,8 +220,8 @@
         <option value="$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Serie.java" />
         <option value="$PROJECT_DIR$/src/com/Juanlu/Main.java" />
         <option value="$PROJECT_DIR$/src/com/Juanlu/model/Actor.java" />
-        <option value="$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java" />
         <option value="$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java" />
+        <option value="$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java" />
       </list>
     </option>
   </component>
@@ -282,6 +298,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -385,8 +403,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -858,7 +874,9 @@
       <workItem from="1496348368994" duration="3268000" />
       <workItem from="1496398485936" duration="7245000" />
       <workItem from="1496410965636" duration="6084000" />
-      <workItem from="1496430993355" duration="4402000" />
+      <workItem from="1496430993355" duration="4594000" />
+      <workItem from="1496527121802" duration="2250000" />
+      <workItem from="1496697382671" duration="9495000" />
     </task>
     <task id="LOCAL-00001" summary="Error en la impresion de la fecha">
       <created>1496355515072</created>
@@ -892,7 +910,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78739000" />
+    <option name="totallyTimeSpent" value="90676000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -908,7 +926,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -917,14 +935,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3227223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2579583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16822916" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="1" y="655" width="253" height="374" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -953,7 +971,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="33" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1026,7 +1044,9 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printListToDo#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printListToDo#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
@@ -1036,19 +1056,21 @@
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#11902#11909#0" expanded="true" />
-            <element signature="e#13049#13086#0" expanded="false" />
-            <element signature="e#13720#13754#0" expanded="false" />
+            <element signature="e#13365#13402#0" expanded="false" />
+            <element signature="e#14036#14070#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#15434#15441#0" expanded="true" />
-            <element signature="e#16569#16604#0" expanded="false" />
-            <element signature="e#17244#17279#0" expanded="false" />
+            <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#16882#16917#0" expanded="false" />
+            <element signature="e#17557#17592#0" expanded="false" />
+            <element signature="e#18368#18402#0" expanded="false" />
             <element signature="docComment;method#actorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#actorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#selector#0;class#Filmapp#0" expanded="false" />
             <element signature="method#selector#0;class#Filmapp#0" expanded="false" />
@@ -1060,9 +1082,13 @@
             <element signature="docComment;method#printGenaralList#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printActor#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
             <element signature="method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadMovies#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadMovies#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadSeries#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadSeries#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadActors#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadActors#0;class#Filmapp#0" expanded="false" />
           </folding>
         </state>
@@ -1132,7 +1158,9 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printListToDo#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printListToDo#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
@@ -1142,19 +1170,21 @@
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#11902#11909#0" expanded="true" />
-            <element signature="e#13049#13086#0" expanded="false" />
-            <element signature="e#13720#13754#0" expanded="false" />
+            <element signature="e#13365#13402#0" expanded="false" />
+            <element signature="e#14036#14070#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#15434#15441#0" expanded="true" />
-            <element signature="e#16569#16604#0" expanded="false" />
-            <element signature="e#17244#17279#0" expanded="false" />
+            <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#16882#16917#0" expanded="false" />
+            <element signature="e#17557#17592#0" expanded="false" />
+            <element signature="e#18368#18402#0" expanded="false" />
             <element signature="docComment;method#actorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#actorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#selector#0;class#Filmapp#0" expanded="false" />
             <element signature="method#selector#0;class#Filmapp#0" expanded="false" />
@@ -1166,9 +1196,13 @@
             <element signature="docComment;method#printGenaralList#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printActor#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
             <element signature="method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadMovies#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadMovies#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadSeries#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadSeries#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadActors#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadActors#0;class#Filmapp#0" expanded="false" />
           </folding>
         </state>
@@ -1238,7 +1272,9 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printListToDo#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printListToDo#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
@@ -1248,19 +1284,21 @@
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#11902#11909#0" expanded="true" />
-            <element signature="e#13049#13086#0" expanded="false" />
-            <element signature="e#13720#13754#0" expanded="false" />
+            <element signature="e#13365#13402#0" expanded="false" />
+            <element signature="e#14036#14070#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#15434#15441#0" expanded="true" />
-            <element signature="e#16569#16604#0" expanded="false" />
-            <element signature="e#17244#17279#0" expanded="false" />
+            <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#16882#16917#0" expanded="false" />
+            <element signature="e#17557#17592#0" expanded="false" />
+            <element signature="e#18368#18402#0" expanded="false" />
             <element signature="docComment;method#actorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#actorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#selector#0;class#Filmapp#0" expanded="false" />
             <element signature="method#selector#0;class#Filmapp#0" expanded="false" />
@@ -1272,9 +1310,13 @@
             <element signature="docComment;method#printGenaralList#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printActor#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
             <element signature="method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadMovies#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadMovies#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadSeries#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadSeries#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadActors#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadActors#0;class#Filmapp#0" expanded="false" />
           </folding>
         </state>
@@ -1392,7 +1434,9 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printListToDo#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printListToDo#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
@@ -1402,19 +1446,21 @@
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#11902#11909#0" expanded="true" />
-            <element signature="e#13049#13086#0" expanded="false" />
-            <element signature="e#13720#13754#0" expanded="false" />
+            <element signature="e#13365#13402#0" expanded="false" />
+            <element signature="e#14036#14070#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#15434#15441#0" expanded="true" />
-            <element signature="e#16569#16604#0" expanded="false" />
-            <element signature="e#17244#17279#0" expanded="false" />
+            <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#16882#16917#0" expanded="false" />
+            <element signature="e#17557#17592#0" expanded="false" />
+            <element signature="e#18368#18402#0" expanded="false" />
             <element signature="docComment;method#actorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#actorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#selector#0;class#Filmapp#0" expanded="false" />
             <element signature="method#selector#0;class#Filmapp#0" expanded="false" />
@@ -1426,9 +1472,13 @@
             <element signature="docComment;method#printGenaralList#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printActor#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
             <element signature="method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadMovies#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadMovies#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadSeries#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadSeries#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadActors#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadActors#0;class#Filmapp#0" expanded="false" />
           </folding>
         </state>
@@ -1498,7 +1548,9 @@
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printListToDo#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printListToDo#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
@@ -1508,19 +1560,21 @@
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#11902#11909#0" expanded="true" />
-            <element signature="e#13049#13086#0" expanded="false" />
-            <element signature="e#13720#13754#0" expanded="false" />
+            <element signature="e#13365#13402#0" expanded="false" />
+            <element signature="e#14036#14070#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#15434#15441#0" expanded="true" />
-            <element signature="e#16569#16604#0" expanded="false" />
-            <element signature="e#17244#17279#0" expanded="false" />
+            <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#16882#16917#0" expanded="false" />
+            <element signature="e#17557#17592#0" expanded="false" />
+            <element signature="e#18368#18402#0" expanded="false" />
             <element signature="docComment;method#actorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#actorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#selector#0;class#Filmapp#0" expanded="false" />
             <element signature="method#selector#0;class#Filmapp#0" expanded="false" />
@@ -1532,9 +1586,13 @@
             <element signature="docComment;method#printGenaralList#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printActor#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
             <element signature="method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadMovies#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadMovies#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadSeries#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadSeries#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadActors#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadActors#0;class#Filmapp#0" expanded="false" />
           </folding>
         </state>
@@ -1565,36 +1623,18 @@
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Documentary.java" />
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Serie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+        <state relative-caret-position="269">
+          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Juanlu/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="145" column="81" lean-forward="false" selection-start-line="145" selection-start-column="81" selection-end-line="145" selection-end-column="81" />
+        <state relative-caret-position="410">
+          <caret line="149" column="19" lean-forward="false" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
           <folding>
             <element signature="docComment;method#Actor#1;class#Actor#0" expanded="false" />
             <element signature="method#Actor#1;class#Actor#0" expanded="false" />
@@ -1607,15 +1647,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Juanlu/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/multimedia/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="95" column="99" lean-forward="false" selection-start-line="95" selection-start-column="99" selection-end-line="95" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#equals#0;class#Multimedia#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Juanlu/controller/Filmapp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="477" column="12" lean-forward="true" selection-start-line="477" selection-start-column="12" selection-end-line="477" selection-end-column="12" />
+        <state relative-caret-position="162">
+          <caret line="581" column="48" lean-forward="false" selection-start-line="581" selection-start-column="48" selection-end-line="581" selection-end-column="48" />
           <folding>
             <element signature="docComment;class#Filmapp#0" expanded="false" />
             <element signature="method#Filmapp#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#run#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printListToDo#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#printListToDo#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="method#movieMenu#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#seriesMenu#0;class#Filmapp#0" expanded="false" />
@@ -1625,19 +1696,21 @@
             <element signature="docComment;method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printSerieOptions#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addMovie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#11902#11909#0" expanded="true" />
-            <element signature="e#13049#13086#0" expanded="false" />
-            <element signature="e#13720#13754#0" expanded="false" />
+            <element signature="e#13365#13402#0" expanded="false" />
+            <element signature="e#14036#14070#0" expanded="false" />
             <element signature="docComment;method#addSerie#0;class#Filmapp#0" expanded="false" />
-            <element signature="e#15434#15441#0" expanded="true" />
-            <element signature="e#16569#16604#0" expanded="false" />
-            <element signature="e#17244#17279#0" expanded="false" />
+            <element signature="method#addSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="e#16882#16917#0" expanded="false" />
+            <element signature="e#17557#17592#0" expanded="false" />
+            <element signature="e#18368#18402#0" expanded="false" />
             <element signature="docComment;method#actorSelector#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#actorSelector#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
-            <element signature="method#addActorToMultimediaOnList#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#editSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delMovie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delMovie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#delSerie#0;class#Filmapp#0" expanded="false" />
+            <element signature="method#delSerie#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#addActor#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#selector#0;class#Filmapp#0" expanded="false" />
             <element signature="method#selector#0;class#Filmapp#0" expanded="false" />
@@ -1649,21 +1722,14 @@
             <element signature="docComment;method#printGenaralList#0;class#Filmapp#0" expanded="false" />
             <element signature="docComment;method#printActor#0;class#Filmapp#0" expanded="false" />
             <element signature="method#printActor#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
             <element signature="method#saveMultimedia#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadMovies#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadMovies#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadSeries#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadSeries#0;class#Filmapp#0" expanded="false" />
+            <element signature="docComment;method#loadActors#0;class#Filmapp#0" expanded="false" />
             <element signature="method#loadActors#0;class#Filmapp#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Juanlu/model/Multimedia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="190" column="6" lean-forward="false" selection-start-line="190" selection-start-column="6" selection-end-line="190" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#equals#0;class#Multimedia#0" expanded="false" />
           </folding>
         </state>
       </provider>

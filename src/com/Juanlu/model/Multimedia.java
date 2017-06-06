@@ -67,6 +67,9 @@ public abstract class Multimedia implements Serializable {
 //Accesores
 
     public Calendar getReleaseDate() {
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+        String fecha = formato.format(this.releaseDate.getTime());
+
         return releaseDate;
     }
 
@@ -87,7 +90,11 @@ public abstract class Multimedia implements Serializable {
     }
 
     public void setScore(double score) {
-        this.score = score;
+        if (score >= 0 && score <= 10){
+            this.score = score;
+        }else {
+            System.out.println("La puntuacion tiene que ser mayor o igual a 0 y menos o igual a 10.");
+        }
     }
 
     public String getName() {
@@ -194,7 +201,7 @@ public abstract class Multimedia implements Serializable {
         String fecha = formato.format(this.releaseDate.getTime());
 
         return  "Nombre: " + name  +
-                ", puntuacion: " + score +
+                ". Puntuacion: " + score +
                 "\n\t\tFecha de estreno: " + fecha +
                 "\n\t\tActores: " + actors;
 
